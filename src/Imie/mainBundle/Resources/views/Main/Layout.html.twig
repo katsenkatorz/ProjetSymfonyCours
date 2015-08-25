@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}New Project !!{% endblock %}</title>
+    <script src="{{ asset('bundles/main/js/bootstrap/jquery-2.1.4.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('bundles/main/css/bootstrap/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/main/css/bootstrap/bootstrap-theme.min.css') }}"/>
+    {% block stylesheets %}
+
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <div id="content">
+                {% block body %}
+   test
+
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+      <script src="{{ asset('bundles/main/js/bootstrap/bootstrap.min.js') }}"></script>
+    {% block javascripts %}
+
+    {% endblock %}
+</body>
+</html>
