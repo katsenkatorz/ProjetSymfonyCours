@@ -4,12 +4,15 @@
 		<meta charset="UTF-8"/>
 		<title>{% block title %}Domaine des Ducs !{% endblock %}</title>
 		<link href="{{ asset('content/css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('content/css/bootstrap/datepicker.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('content/css/font-awesome/css/font-awesome.min.css') }}">
 		{% block stylesheets %}{% endblock %}
 		<link href="{{ asset('favicon.ico') }}" rel="icon" type="image/x-icon"/>
+        <script src="{{ asset('content/js/jquery-2.1.4.min.js') }}"></script>
 	</head>
 	<body>
+    {% include("::shared/_header.html.twig") %}
 		<div class="container-fluid">
-			{% include("::shared/_header.html.twig") %}
 			<div class="row">
 				<div class="col-md-12">
 					{% block body %}{% endblock %}
@@ -18,7 +21,8 @@
 			{% include("::shared/_footer.html.twig") %}
 		</div>
 		<script src="{{ asset('content/js/bootstrap/bootstrap.min.js') }}"></script>
-		<script src="{{ asset('content/js/jquery-2.1.4.min.js') }}"></script>
+		<script src="{{ asset('content/js/bootstrap/bootstrap-datepicker.min.js') }}"></script>
+		<script src="{{ asset('content/js/main.js') }}"></script>
 		{% block javascripts %}{% endblock %}
 	</body>
 </html>

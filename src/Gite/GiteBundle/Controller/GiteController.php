@@ -6,12 +6,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class GiteController extends Controller
 {
-    public function indexAction($id)
+    public function getGiteAction($id)
     {
 
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->find($id);
 
-        return $this->render('GiteBundle:Gite:list.html.twig', array('gite' => $gite));
+        return $this->render('GiteBundle:Gite:view.html.twig', array('gite' => $gite));
+    }
+
+    public function getGiteListAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $gites = $em->getRepository('GiteBundle:Gite')->findAll();
+
+        return $this->render('GiteBundle:Gite:listview.html.twig', array('gites' => $gites));
+
     }
 }

@@ -1,3 +1,7 @@
-gite_homepage:
+gite_view:
     path:     /gite/{id}/
-    defaults: { _controller: GiteBundle:Gite:index }
+    defaults: { _controller: GiteBundle:Gite:getGite }
+
+gite_listview:
+    path:     /gites/
+    defaults: { _controller: GiteBundle:Gite:getGiteList }

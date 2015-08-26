@@ -1,0 +1,19 @@
+{% extends "HomeBundle::Main/layout.html.twig" %}
+{% block home_body %}
+    <div class="row">
+        <div class="col-md-8">
+            <p>{{ gite.id|raw }}</p>
+            <p>{{ gite.name|raw }}</p>
+            <p>{{ gite.options }}</p>
+            {{ gite.content|raw }}
+            <br/>
+            <hr/>
+        </div>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i></span>
+                <input type="text" class="datepicker form-control" data-date-format="DD dd MM yyyy" placeholder="Date">
+            </div>
+        </div>
+    </div>
+{% endblock %}
