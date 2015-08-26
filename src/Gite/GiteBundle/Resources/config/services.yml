@@ -1,0 +1,4 @@
+services:
+#    gite.example:
+#        class: Gite\GiteBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
