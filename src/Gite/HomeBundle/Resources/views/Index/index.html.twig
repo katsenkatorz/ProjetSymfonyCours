@@ -3,10 +3,10 @@
         <h1>Gite yeah !!!</h1>
         {% for gite in gites|slice (0, 2) %}
             <p>{{ gite.id|raw }}</p>
-            <p>{{ gite.name|raw }}</p>
+            <p><a href="{{ path('gite_homepage', { 'id':gite.id }) }}">{{ gite.name|raw }}</a></p>
             <p>{{ gite.options }}</p>
             {{ gite.content|raw }}
             <br/>
-            <br/>
+            <hr/>
         {% endfor %}
 {% endblock %}
