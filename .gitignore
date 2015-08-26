@@ -83,3 +83,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 src/Imie/mainBundle/Resources/views/Main/Layout.html.twig
+*.xml
+.idea/workspace.xml
