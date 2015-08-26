@@ -1,0 +1,4 @@
+services:
+#    reservation.example:
+#        class: Gite\ReservationBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

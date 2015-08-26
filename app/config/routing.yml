@@ -1,9 +1,5 @@
-image:
-    resource: "@ImageBundle/Resources/config/routing.yml"
-    prefix:   /
-
-galerie:
-    resource: "@GalerieBundle/Resources/config/routing.yml"
+reservation:
+    resource: "@ReservationBundle/Resources/config/routing.yml"
     prefix:   /
 
 gite:
