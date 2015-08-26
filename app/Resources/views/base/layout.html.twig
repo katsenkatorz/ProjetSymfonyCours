@@ -9,13 +9,13 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			{% include("::Shared/_header.html.twig") %}
+			{% include("::shared/_header.html.twig") %}
 			<div class="row">
 				<div class="col-md-12">
 					{% block body %}{% endblock %}
 				</div>
 			</div>
-			{% include("::Shared/_footer.html.twig") %}
+			{% include("::shared/_footer.html.twig") %}
 		</div>
 		<script src="{{ asset('content/js/bootstrap/bootstrap.min.js') }}"></script>
 		<script src="{{ asset('content/js/jquery-2.1.4.min.js') }}"></script>
