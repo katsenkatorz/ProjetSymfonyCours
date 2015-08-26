@@ -85,3 +85,5 @@ $RECYCLE.BIN/
 src/Imie/mainBundle/Resources/views/Main/Layout.html.twig
 *.xml
 .idea/workspace.xml
+.idea/workspace.xml
+.idea/workspace.xml
