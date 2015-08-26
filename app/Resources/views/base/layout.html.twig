@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Domaine des Ducs !{% endblock %}</title>
+    <link href="{{ asset('content/css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+    <link href="{{ asset('favicon.ico') }}" rel="icon" type="image/x-icon"/>
+  </head>
+  <body>
+    <div class="container-fluid">
+      {% include("::Shared/_header.html.twig") %}
+      <div class="row">
+        {% block body %}{% endblock %}
+      </div>
+      {% include("::Shared/_footer.html.twig") %}
+    </div>
+    <script src="{{ asset('content/js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('content/js/jquery-2.1.4.min.js') }}"></script>
+    {% block javascripts %}{% endblock %}
+  </body>
+</html>
