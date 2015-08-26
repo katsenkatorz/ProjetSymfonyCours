@@ -1,0 +1,12 @@
+{% extends "HomeBundle::Main/layout.html.twig" %}
+{% block home_body %}
+        <h1>Gite yeah !!!</h1>
+        {% for gite in gites|slice (0, 2) %}
+            <p>{{ gite.id|raw }}</p>
+            <p>{{ gite.name|raw }}</p>
+            <p>{{ gite.options }}</p>
+            {{ gite.content|raw }}
+            <br/>
+            <br/>
+        {% endfor %}
+{% endblock %}
