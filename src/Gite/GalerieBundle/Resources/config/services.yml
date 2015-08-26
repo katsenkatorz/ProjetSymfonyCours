@@ -1,0 +1,4 @@
+services:
+#    galerie.example:
+#        class: Gite\GalerieBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
