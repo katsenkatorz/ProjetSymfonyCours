@@ -9,7 +9,3 @@ reservation:
 gite:
     resource: "@GiteBundle/Resources/config/routing.yml"
     prefix:   /
-
-main:
-    resource: "@mainBundle/Resources/config/routing.yml"
-    prefix:   /
