@@ -18,8 +18,6 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Gite\GiteBundle\GiteBundle(),
             new Gite\GalerieBundle\GalerieBundle(),
-            new Gite\ImageBundle\ImageBundle(),
-            new Gite\ReservationBundle\ReservationBundle(),
             new Gite\HomeBundle\HomeBundle(),
         );
 

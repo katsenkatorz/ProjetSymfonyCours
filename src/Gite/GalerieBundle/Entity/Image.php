@@ -1,6 +1,6 @@
 <?php
 
-namespace Gite\ImageBundle\Entity;
+namespace Gite\GalerieBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Image
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Gite\ImageBundle\Entity\ImageRepository")
+ * @ORM\Entity(repositoryClass="Gite\GalerieBundle\Entity\ImageRepository")
  */
 class Image
 {
@@ -50,7 +50,7 @@ class Image
      * Set url
      *
      * @param string $url
-     * @return Post
+     * @return Image
      */
     public function setUrl($url)
     {
@@ -73,7 +73,7 @@ class Image
      * Set alt
      *
      * @param string $alt
-     * @return Post
+     * @return Image
      */
     public function setAlt($alt)
     {

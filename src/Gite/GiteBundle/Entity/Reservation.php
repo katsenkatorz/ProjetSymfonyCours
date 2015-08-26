@@ -1,6 +1,6 @@
 <?php
 
-namespace Gite\ReservationBundle\Entity;
+namespace Gite\GiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Reservation
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Gite\ReservationBundle\Entity\ReservationRepository")
+ * @ORM\Entity(repositoryClass="Gite\GiteBundle\Entity\ReservationRepository")
  */
 class Reservation
 {
@@ -24,28 +24,28 @@ class Reservation
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="arrival", type="datetime")
+     * @ORM\Column(name="arrival", type="date")
      */
     private $arrival;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="departure", type="datetime")
+     * @ORM\Column(name="departure", type="date")
      */
     private $departure;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="string", length=255)
+     * @ORM\Column(name="content", type="text")
      */
     private $content;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="capacity", type="boolean")
+     * @ORM\Column(name="capacity", type="integer")
      */
     private $capacity;
 
@@ -64,7 +64,7 @@ class Reservation
      * Set arrival
      *
      * @param \DateTime $arrival
-     * @return Post
+     * @return Reservation
      */
     public function setArrival($arrival)
     {
@@ -87,7 +87,7 @@ class Reservation
      * Set departure
      *
      * @param \DateTime $departure
-     * @return Post
+     * @return Reservation
      */
     public function setDeparture($departure)
     {
@@ -110,7 +110,7 @@ class Reservation
      * Set content
      *
      * @param string $content
-     * @return Post
+     * @return Reservation
      */
     public function setContent($content)
     {
@@ -132,8 +132,8 @@ class Reservation
     /**
      * Set capacity
      *
-     * @param boolean $capacity
-     * @return Post
+     * @param integer $capacity
+     * @return Reservation
      */
     public function setCapacity($capacity)
     {
@@ -145,7 +145,7 @@ class Reservation
     /**
      * Get capacity
      *
-     * @return boolean 
+     * @return integer 
      */
     public function getCapacity()
     {
