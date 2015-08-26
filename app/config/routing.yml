@@ -17,15 +17,3 @@ reservation:
 gite:
     resource: "@GiteBundle/Resources/config/routing.yml"
     prefix:   /
-
-main:
-    resource: "@mainBundle/Resources/config/routing.yml"
-    prefix:   /
-
-image:
-    resource: "@ImageBundle/Resources/config/routing.yml"
-    prefix:   /
-
-galerie:
-    resource: "@GalerieBundle/Resources/config/routing.yml"
-    prefix:   /
