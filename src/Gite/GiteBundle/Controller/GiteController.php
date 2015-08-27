@@ -3,6 +3,7 @@
 namespace Gite\GiteBundle\Controller;
 
 use Gite\GiteBundle\Entity\Gite;
+use Gite\GiteBundle\Form\GiteType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -41,7 +42,7 @@ class GiteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $gite = new Gite();
-        $formBuilder = $this->get('form.factory')->createBuilder('form', $gite);
+        /*$formBuilder = $this->get('form.factory')->createBuilder('form', $gite);
         $formBuilder
             ->add('name', 'text')
             ->add('content', 'textarea')
@@ -49,7 +50,12 @@ class GiteController extends Controller
             ->add('Creer gite', 'submit');
 
         $form = $formBuilder->getForm();
-
+*/
+        $form=$this->createForm(
+            new GiteType(),
+            $gite,
+            array()
+        );
         $form->handleRequest($request);
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
