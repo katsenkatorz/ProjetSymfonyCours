@@ -1,13 +1,4 @@
 {% extends "HomeBundle::Main/layout.html.twig" %}
 {% block home_body %}
-        <h1>Accueil</h1>
-    <p>Lorem ipsum de la mort, graou ca depote sa maman !</p>
-        {% for gite in gites|slice (0, 2) %}
-            <p>{{ gite.id|raw }}</p>
-            <p><a href="{{ path('gite_view', { 'id':gite.id }) }}">{{ gite.name|raw }}</a></p>
-            <p>{{ gite.options }}</p>
-            {{ gite.content|raw }}
-            <br/>
-            <hr/>
-        {% endfor %}
+{{ render(controller('GiteBundle:Gite:getGiteList')) }}
 {% endblock %}
