@@ -1,3 +1,11 @@
-gite_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: GiteBundle:Default:index }
+gite_view:
+    path:     /gite/{id}/
+    defaults: { _controller: GiteBundle:Gite:getGite }
+
+gite_listview:
+    path:     /gites/
+    defaults: { _controller: GiteBundle:Gite:ListGites }
+
+reservation_create:
+    path:     /gite/{id}/reservation/
+    defaults: { _controller: GiteBundle:Reservation:createReservation }

@@ -18,9 +18,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Gite\GiteBundle\GiteBundle(),
             new Gite\GalerieBundle\GalerieBundle(),
-            new Gite\ImageBundle\ImageBundle(),
-            new Gite\ReservationBundle\ReservationBundle(),
             new Gite\HomeBundle\HomeBundle(),
+            new Gite\ContactBundle\ContactBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
