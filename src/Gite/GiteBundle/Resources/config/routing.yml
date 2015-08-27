@@ -4,7 +4,7 @@ gite_view:
 
 gite_listview:
     path:     /gites/
-    defaults: { _controller: GiteBundle:Gite:getGiteList }
+    defaults: { _controller: GiteBundle:Gite:ListGites }
 
 reservation_create:
     path:     /gite/{id}/reservation/
