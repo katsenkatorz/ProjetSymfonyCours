@@ -5,12 +5,12 @@ namespace Gite\ImageBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Image
+ * Post
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Gite\ImageBundle\Entity\ImageRepository")
+ * @ORM\Entity(repositoryClass="Gite\ImageBundle\Entity\PostRepository")
  */
-class Image
+class Post
 {
     /**
      * @var integer

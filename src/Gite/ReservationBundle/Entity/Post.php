@@ -5,12 +5,12 @@ namespace Gite\ReservationBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Reservation
+ * Post
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Gite\ReservationBundle\Entity\ReservationRepository")
+ * @ORM\Entity(repositoryClass="Gite\ReservationBundle\Entity\PostRepository")
  */
-class Reservation
+class Post
 {
     /**
      * @var integer
