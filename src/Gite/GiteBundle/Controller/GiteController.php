@@ -25,7 +25,7 @@ class GiteController extends Controller
         $em = $this->getDoctrine()->getManager();
         $gites = $em->getRepository('GiteBundle:Gite')->findAll();
 
-        return $this->render('GiteBundle:Gite:listview.html.twig', array('gites' => $gites));
+        return $this->render('GiteBundle:ModuleUsed:listgite.html.twig', array('gites' => $gites));
 
     }
 }
