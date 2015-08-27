@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Gite\GiteBundle\GiteBundle(),
             new Gite\GalerieBundle\GalerieBundle(),
             new Gite\HomeBundle\HomeBundle(),
+            new Gite\ContactBundle\ContactBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
