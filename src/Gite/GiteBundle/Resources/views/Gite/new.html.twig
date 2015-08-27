@@ -1,0 +1,12 @@
+{% extends "HomeBundle::Main/layout.html.twig" %}
+{% block home_body %}
+    <div class="row">
+        {{ form_start(formulaire_gite) }}
+        {{ form_errors(formulaire_gite) }}
+
+        {{ form_row(formulaire_gite.name) }}
+        {{ form_row(formulaire_gite.content) }}
+        {{ form_row(formulaire_gite.options) }}
+        {{ form_end(formulaire_gite) }}
+    </div>
+{% endblock %}
