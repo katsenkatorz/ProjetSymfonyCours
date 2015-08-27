@@ -3,6 +3,8 @@
 namespace Gite\GiteBundle\Controller;
 
 use Gite\GiteBundle\Entity\Gite;
+use Gite\GiteBundle\Form\GiteType;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -39,24 +41,22 @@ class GiteController extends Controller
      */
     public function newGiteAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
         $gite = new Gite();
-        $formBuilder = $this->get('form.factory')->createBuilder('form', $gite);
-        $formBuilder
-            ->add('name', 'text')
-            ->add('content', 'textarea')
-            ->add('options', 'text')
-            ->add('Creer gite', 'submit');
 
-        $form = $formBuilder->getForm();
+        $form = $this->createForm(
+            new GiteType(),
+            $gite,
+            array()
+        );
 
         $form->handleRequest($request);
+        
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($gite);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('create_gite'));
+            return $this->redirect($this->generateUrl('gite_listview'));
 
         }
         return array(
