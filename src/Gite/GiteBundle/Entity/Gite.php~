@@ -124,27 +124,4 @@ class Gite
     {
         return $this->options;
     }
-
-    /**
-     * Set galerie
-     *
-     * @param \Gite\GalerieBundle\Entity\Galerie $galerie
-     * @return Gite
-     */
-    public function setGalerie(\Gite\GalerieBundle\Entity\Galerie $galerie = null)
-    {
-        $this->galerie = $galerie;
-
-        return $this;
-    }
-
-    /**
-     * Get galerie
-     *
-     * @return \Gite\GalerieBundle\Entity\Galerie 
-     */
-    public function getGalerie()
-    {
-        return $this->galerie;
-    }
 }

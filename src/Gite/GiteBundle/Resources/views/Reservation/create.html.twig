@@ -1,57 +1,67 @@
 {% extends "HomeBundle::Main/layout.html.twig" %}
 {% block home_body %}
-    ID: {{ id }}
-    <form action="" id="contactForm" class="form-horizontal" method="post">
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i></span>
-                <input type="text" class="datepicker form-control" data-date-format="DD dd MM yyyy"
-                       placeholder="Date">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i></span>
-                <input type="text" class="datepicker form-control" data-date-format="DD dd MM yyyy"
-                       placeholder="Date">
-            </div>
-            <div class="input-group">
-                <label class="control-label" for="capacity">Personne</label>
-                <select name="capacity" id="capacity" class="form-control">
-                    <option value="1"> 1</option>
-                    <option value="2"> 2</option>
-                    <option value="3"> 3</option>
-                    <option value="4"> 4</option>
-                    <option value="5"> 5</option>
-                    <option value="6"> 6</option>
-                    <option value="7"> 7</option>
-                    <option value="8"> 8</option>
-                    <option value="9"> 9</option>
-                    <option value="10"> 10</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label class="control-label" for="contactName">Nom <span class="asterisk">*</span></label>
-                <input type="text" name="contactName" id="contactName" value="" class="form-control"><br>
-            </div>
+<div class="row">
+	<div class="col-md-12">
 
-            <div class="input-group">
-                <label class="control-label" for="contactTel">Téléphone <span class="asterisk">*</span></label>
-                <input type="text" name="contactTel" id="contactTel" value="" class="form-control"><br>
-            </div>
+		ID:
+		{{ id }}
+		<form action="" class="form-horizontal" id="contactForm" method="post">
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">
+						<i class="fa fa-calendar"></i>
+					</span>
+					<input class="datepicker form-control" data-date-format="DD dd MM yyyy" placeholder="Date" type="text">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">
+						<i class="fa fa-calendar"></i>
+					</span>
+					<input class="datepicker form-control" data-date-format="DD dd MM yyyy" placeholder="Date" type="text">
+				</div>
+				<div class="input-group">
+					<label class="control-label" for="capacity">Personne</label>
+					<select id="capacity" name="capacity">
+						<option value="1">
+							1</option>
+						<option value="2">
+							2</option>
+					</select>
+				</div>
+				<div class="input-group">
+					<label class="control-label" for="contactName">Nom
+						<span class="asterisk">*</span>
+					</label>
+					<input class="form-control" id="contactName" name="contactName" type="text" value=""><br>
+				</div>
 
-            <div class="input-group">
-                <label class="control-label" for="email">Email <span class="asterisk">*</span></label>
-                <input type="email" name="email" id="email" value="" class="form-control"><br>
-            </div>
-            <div class="input-group">
-                <label class="control-label" for="commentsText">Message <span class="asterisk">*</span></label>
-                <textarea name="message" rows="20" cols="30" class="form-control"></textarea><br>
-            </div>
+				<div class="input-group">
+					<label class="control-label" for="contactTel">Téléphone
+						<span class="asterisk">*</span>
+					</label>
+					<input class="form-control" id="contactTel" name="contactTel" type="text" value=""><br>
+				</div>
 
-            <div class="input-group">
-                <label class="control-label" for="sendCopy">Recevoir une copie du message</label>
-                <input type="checkbox" name="sendCopy" id="sendCopy" class="form-control" value="true">
-            </div>
-            <button type="submit">Envoyer</button>
-        </div>
-    </form>
+				<div class="input-group">
+					<label class="control-label" for="email">Email
+						<span class="asterisk">*</span>
+					</label>
+					<input class="form-control" id="email" name="email" type="email" value=""><br>
+				</div>
+				<div class="input-group">
+					<label class="control-label" for="commentsText">Message
+						<span class="asterisk">*</span>
+					</label>
+					<textarea class="form-control" cols="30" name="message" rows="20"></textarea><br>
+				</div>
+
+				<div class="input-group">
+					<label class="control-label" for="sendCopy">Recevoir une copie du message</label>
+					<input id="sendCopy" name="sendCopy" type="checkbox" value="true">
+				</div>
+				<button type="submit">Envoyer</button>
+			</div>
+		</form>
+	</div>
+</div>
 {% endblock %}

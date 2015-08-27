@@ -155,27 +155,4 @@ class Reservation
     {
         return $this->capacity;
     }
-
-    /**
-     * Set gite
-     *
-     * @param \Gite\GiteBundle\Entity\Gite $gite
-     * @return Reservation
-     */
-    public function setGite(\Gite\GiteBundle\Entity\Gite $gite = null)
-    {
-        $this->gite = $gite;
-
-        return $this;
-    }
-
-    /**
-     * Get gite
-     *
-     * @return \Gite\GiteBundle\Entity\Gite 
-     */
-    public function getGite()
-    {
-        return $this->gite;
-    }
 }

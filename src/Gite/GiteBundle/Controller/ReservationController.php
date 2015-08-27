@@ -8,7 +8,7 @@ class ReservationController extends Controller
 {
     public function createReservationAction($id)
     {
-
+        
         return $this->render('GiteBundle:Reservation:create.html.twig', array('id' => $id));
     }
 }
