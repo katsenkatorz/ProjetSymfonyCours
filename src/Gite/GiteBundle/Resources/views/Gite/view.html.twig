@@ -11,7 +11,7 @@
             <br>
         </div>
         <div class="col-md-4">
-            <form action="{{ path('reservation_create', { 'id':gite.id }) }}" class="" method="post">
+            <form action="{{ path('reservation_new', { 'id':gite.id }) }}" class="" method="post">
                 <div class="row">
                     <div class="col-md-6">
                         <label class="control-label">Date d'arrivée</label>
@@ -41,7 +41,6 @@
                     </div>
                 </div>
             </form>
-            <hr>
         </div>
     </div>
 {% endblock %}

@@ -10,6 +10,10 @@ new_gite:
     path:     /newgite/
     defaults: { _controller: GiteBundle:Gite:newGite}
 
-reservation_create:
+pre_reservation_new:
+    path:     /gite/{id}/pre-reservation/
+    defaults: { _controller: GiteBundle:Reservation:newPreReservation }
+
+reservation_new:
     path:     /gite/{id}/reservation/
-    defaults: { _controller: GiteBundle:Reservation:createReservation }
+    defaults: { _controller: GiteBundle:Reservation:newReservation }

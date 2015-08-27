@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class GiteType extends AbstractType
+class ReservationType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,9 +15,10 @@ class GiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('arrival', 'datetime', array('widget' => 'single_text', 'format' => 'dd MM yyyy'))
+            ->add('departure', 'datetime', array('widget' => 'single_text', 'format' => 'dd MM yyyy'))
             ->add('content')
-            ->add('options')
+            ->add('capacity')
             ->add('Créer', 'submit', array('attr' => array('class' => 'btn btn-success')))
         ;
     }
@@ -28,7 +29,7 @@ class GiteType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Gite\GiteBundle\Entity\Gite'
+            'data_class' => 'Gite\GiteBundle\Entity\Reservation'
         ));
     }
 
@@ -37,6 +38,6 @@ class GiteType extends AbstractType
      */
     public function getName()
     {
-        return 'gite_gitebundle_gite';
+        return 'gite_gitebundle_reservation';
     }
 }
