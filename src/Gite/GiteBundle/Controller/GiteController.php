@@ -19,20 +19,8 @@ class GiteController extends Controller
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->find($id);
 
-        /* Forumlaire préreservation */
-        $defaultData = array('message' => 'Type your message here');
-        $form = $this->createFormBuilder($defaultData)
-            ->setAction($this->generateUrl('reservation_new'))
-            ->add('arrival', 'datetime', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
-            ->add('departure', 'datetime', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
-            ->add('idGite', 'hidden')
-            ->add('Reserver', 'submit')
-            ->getForm();
-
-
         return $this->render('GiteBundle:Gite:view.html.twig', array(
             'gite' => $gite,
-            'pre_resa' => $form->createView(),
         ));
     }
 
