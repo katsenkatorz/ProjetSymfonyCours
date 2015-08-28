@@ -1,0 +1,30 @@
+gite:
+    path:     /
+    defaults: { _controller: "GiteBundle:Gite:index" }
+
+gite_show:
+    path:     /{id}/show
+    defaults: { _controller: "GiteBundle:Gite:show" }
+
+gite_new:
+    path:     /new
+    defaults: { _controller: "GiteBundle:Gite:new" }
+
+gite_create:
+    path:     /create
+    defaults: { _controller: "GiteBundle:Gite:create" }
+    methods:  POST
+
+gite_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GiteBundle:Gite:edit" }
+
+gite_update:
+    path:     /{id}/update
+    defaults: { _controller: "GiteBundle:Gite:update" }
+    methods:  [POST, PUT]
+
+gite_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GiteBundle:Gite:delete" }
+    methods:  [POST, DELETE]

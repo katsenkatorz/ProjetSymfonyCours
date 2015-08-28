@@ -1,3 +1,7 @@
+gite_gite:
+    resource: "@GiteBundle/Resources/config/routing/gite.yml"
+    prefix:   /gite
+
 gite_reservation:
     resource: "@GiteBundle/Resources/config/routing/reservation.yml"
     prefix:   /reservation
@@ -9,7 +13,3 @@ gite_view:
 gite_listview:
     path:     /gites/
     defaults: { _controller: GiteBundle:Gite:ListGites }
-
-new_gite:
-    path:     /newgite/
-    defaults: { _controller: GiteBundle:Gite:newGite}

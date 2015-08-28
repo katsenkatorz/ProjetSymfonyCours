@@ -18,7 +18,7 @@ class GiteType extends AbstractType
             ->add('name')
             ->add('content')
             ->add('options')
-            ->add('Créer', 'submit', array('attr' => array('class' => 'btn btn-success')))
+            ->add('galerie')
         ;
     }
 
