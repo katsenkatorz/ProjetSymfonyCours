@@ -1,0 +1,47 @@
+{% extends "HomeBundle::Main/layout.html.twig" %}
+
+{% block body -%}
+    <h1>Reservation list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Arrival</th>
+                <th>Departure</th>
+                <th>Content</th>
+                <th>Capacity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('reservation_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.arrival %}{{ entity.arrival|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.departure %}{{ entity.departure|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.content }}</td>
+                <td>{{ entity.capacity }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('reservation_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('reservation_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('reservation_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

@@ -1,0 +1,30 @@
+reservation:
+    path:     /
+    defaults: { _controller: "GiteBundle:Reservation:index" }
+
+reservation_show:
+    path:     /{id}/show
+    defaults: { _controller: "GiteBundle:Reservation:show" }
+
+reservation_new:
+    path:     /new
+    defaults: { _controller: "GiteBundle:Reservation:new" }
+
+reservation_create:
+    path:     /create
+    defaults: { _controller: "GiteBundle:Reservation:create" }
+    methods:  POST
+
+reservation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GiteBundle:Reservation:edit" }
+
+reservation_update:
+    path:     /{id}/update
+    defaults: { _controller: "GiteBundle:Reservation:update" }
+    methods:  [POST, PUT]
+
+reservation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GiteBundle:Reservation:delete" }
+    methods:  [POST, DELETE]

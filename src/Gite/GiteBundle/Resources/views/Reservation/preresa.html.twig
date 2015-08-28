@@ -1,0 +1,20 @@
+
+{% block body -%}
+    {{ form_start(pre_resa) }}
+    {{ form_errors(pre_resa) }}
+
+    {{ form_row(pre_resa.arrival, {
+        'attr': {
+            'class': 'col-md-6 datepicker form-control',
+            'data-date-format':'dd/mm/yyyy'
+        }
+    }) }}
+    {{ form_row(pre_resa.departure, {
+        'attr': {
+            'class': 'col-md-6 datepicker form-control',
+            'data-date-format':'dd/mm/yyyy'
+        }
+    }) }}
+    <br>
+    {{ form_end(pre_resa) }}
+{% endblock %}

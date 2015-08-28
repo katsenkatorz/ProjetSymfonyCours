@@ -11,37 +11,10 @@
             <br>
         </div>
         <div class="col-md-4">
-            <form action="{{ path('reservation_create', { 'id':gite.id }) }}" class="" method="post">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label class="control-label">Date d'arrivée</label>
+            <div class="row">
+                {{ render(controller('GiteBundle:Reservation:preresa', {'idGite' : gite.id})) }}
 
-                        <div class="input-group">
-						<span class="input-group-addon" id="basic-addon1">
-							<i class="fa fa-calendar"></i>
-						</span>
-                            <input class="datepicker form-control" data-date-format="dd/mm/yyyy" placeholder="Date"
-                                   type="text">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="control-label">Date de départ</label>
-
-                        <div class="input-group">
-						<span class="input-group-addon" id="basic-addon1">
-							<i class="fa fa-calendar"></i>
-						</span>
-                            <input class="datepicker form-control" data-date-format="dd/mm/yyyy" placeholder="Date"
-                                   type="text">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <br>
-                        <button class="form-control btn btn-success" name="button" type="submit">Reserver</button>
-                    </div>
-                </div>
-            </form>
-            <hr>
+            </div>
         </div>
     </div>
 {% endblock %}

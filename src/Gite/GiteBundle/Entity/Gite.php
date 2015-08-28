@@ -44,8 +44,14 @@ class Gite
 
     /**
      * @ORM\OneToOne(targetEntity="Gite\GalerieBundle\Entity\Galerie", cascade="persist")
-    */
+     */
     private $galerie;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     /**
      * Get id
      *
@@ -141,7 +147,7 @@ class Gite
     /**
      * Get galerie
      *
-     * @return \Gite\GalerieBundle\Entity\Galerie 
+     * @return \Gite\GalerieBundle\Entity\Galerie
      */
     public function getGalerie()
     {
