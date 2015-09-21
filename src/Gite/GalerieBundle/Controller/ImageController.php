@@ -4,6 +4,7 @@ namespace Gite\GalerieBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Gite\GalerieBundle\Entity\Image;
 use Gite\GalerieBundle\Form\ImageType;
 
@@ -31,16 +32,26 @@ class ImageController extends Controller
     /**
      * Displays a form to create a new Image entity.
      */
-    public function newImageAction()
+    public function newImageAction(Request $request)
     {
         $entity = new Image();
 
-        $em = $this->getDoctrine()->getManager();
+        // $em = $this->getDoctrine()->getManager();
         $form = $this->createCreateForm($entity);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($entity);
+            $em->flush();
+
+            // return $this->redirect($this->generateUrl('gite_show', array('id' => $entity->getId())));
+        }
 
         return $this->render('GalerieBundle:Image:new.html.twig', array(
             'entity' => $entity,
             'form' => $form->createView(),
         ));
     }
+
 }

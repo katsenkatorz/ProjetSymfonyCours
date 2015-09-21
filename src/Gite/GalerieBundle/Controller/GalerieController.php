@@ -40,9 +40,9 @@ class GalerieController extends Controller
         public function editGalerieAction($id)
         {
             $em = $this->getDoctrine()->getManager();
-            $repo = $em->getRepository('GalerieBundle:Galerie')->find($id);
+            $gite = $em->getRepository('GiteBundle:Gite')->find($id);
 
-            $gite = $repo->findOneById($id);
+            // $gite = $repo->findOneById($id);
 
             $galerie = $gite->getGalerie();
 
