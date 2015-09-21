@@ -1,0 +1,10 @@
+{% extends "HomeBundle::Main/layout.html.twig" %}
+
+{% block body -%}
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.name) }}
+    <br>
+    {{ form_end(form) }}
+{% endblock %}

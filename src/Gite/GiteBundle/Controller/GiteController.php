@@ -6,6 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Gite\GiteBundle\Entity\Gite;
 use Gite\GiteBundle\Form\GiteType;
+use Gite\GalerieBundle\Entity\Galerie;
+use Gite\GalerieBundle\Form\GalerieType;
 
 /**
  * Gite controller.

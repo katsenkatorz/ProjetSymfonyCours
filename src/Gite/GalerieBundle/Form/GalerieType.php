@@ -1,12 +1,12 @@
 <?php
 
-namespace Gite\GiteBundle\Form;
+namespace Gite\GalerieBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class GiteType extends AbstractType
+class GalerieType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,10 +15,7 @@ class GiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('content')
-            ->add('options')
-            // ->add('galerie')
+            ->add('images', 'collection', array('type' => new ImageType()));
         ;
     }
 
@@ -28,7 +25,7 @@ class GiteType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Gite\GiteBundle\Entity\Gite'
+            'data_class' => 'Gite\GalerieBundle\Entity\Galerie'
         ));
     }
 
@@ -37,6 +34,6 @@ class GiteType extends AbstractType
      */
     public function getName()
     {
-        return 'gite_gitebundle_gite';
+        return 'gite_galeriebundle_galerie';
     }
 }

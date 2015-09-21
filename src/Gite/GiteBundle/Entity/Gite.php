@@ -2,6 +2,7 @@
 
 namespace Gite\GiteBundle\Entity;
 
+use Gite\GalerieBundle\Entity\Galerie;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,6 +47,11 @@ class Gite
      * @ORM\OneToOne(targetEntity="Gite\GalerieBundle\Entity\Galerie", cascade="persist")
      */
     private $galerie;
+
+    public function __construct(){
+        $gal = $this->galerie = new Galerie();
+        $gal->setName(time());
+    }
 
     public function __toString()
     {

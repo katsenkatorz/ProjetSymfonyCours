@@ -1,3 +1,11 @@
 galerie_homepage:
     path:     /hello/{name}
     defaults: { _controller: GalerieBundle:Default:index }
+
+galerie_edit:
+    path:     /{id}/galerie_edit
+    defaults: { _controller: GalerieBundle:Galerie:editGalerie }
+
+new_image:
+    path:     /newimage
+    defaults: { _controller: GalerieBundle:Image:newImage }

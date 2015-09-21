@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class GiteType extends AbstractType
+class GiteGalerieType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,10 +15,7 @@ class GiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('content')
-            ->add('options')
-            // ->add('galerie')
+            ->add('galerie')
         ;
     }
 
