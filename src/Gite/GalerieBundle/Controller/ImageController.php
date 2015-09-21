@@ -32,7 +32,7 @@ class ImageController extends Controller
     /**
      * Displays a form to create a new Image entity.
      */
-    public function newImageAction(Request $request)
+    /*public function newImageAction(Request $request)
     {
         $entity = new Image();
 
@@ -45,13 +45,38 @@ class ImageController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            // return $this->redirect($this->generateUrl('gite_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('galerie_edit', array('id' => $entity->getId())));
         }
 
         return $this->render('GalerieBundle:Image:new.html.twig', array(
             'entity' => $entity,
             'form' => $form->createView(),
         ));
-    }
+    }*/
 
+    public function newImageAction()
+    {
+        $entity = new Image();
+
+        $form = $this->createFormBuilder($entity)
+            ->add('alt')
+            ->add('url')
+            ->getForm();
+
+        if ($this->getRequest()->isMethod('POST')) {
+            $form->handleRequest($this->getRequest());
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($entity);
+                $em->flush();
+
+                return $this->redirect($this->generateUrl('galerie_edit', array('id' => $entity->getId())));
+            }
+        }
+
+        return $this->render('GalerieBundle:Image:new.html.twig', array(
+            'entity' => $entity,
+            'form_image' => $form->createView(),
+        ));
+    }
 }

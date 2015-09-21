@@ -29,13 +29,14 @@ class Galerie
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="Gite\GalerieBundle\Entity\Image", mappedBy="galerie")
-    */
+     * @ORM\OneToMany(targetEntity="Gite\GalerieBundle\Entity\Image", mappedBy="galerie", cascade={"persist"})
+     */
     private $images;
 
     public function __construct(){
         $this->images = new ArrayCollection();
     }
+
 
 
     /**

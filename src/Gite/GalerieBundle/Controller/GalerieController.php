@@ -37,7 +37,7 @@ class GalerieController extends Controller
     /**
      * Displays a form to create a new Galerie entity.
      */
-    public function editGalerieAction($id)
+    public function editGalerieAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->find($id);
@@ -45,15 +45,25 @@ class GalerieController extends Controller
         // $gite = $repo->findOneById($id);
 
         $galerie = $gite->getGalerie();
-
         if (!$galerie) {
             throw $this->createNotFoundException('Unable to find Gallery entity.');
         }
 
         $editForm = $this->createEditForm($galerie, $id);
 
-        return $this->render('GalerieBundle:Galerie:new.html.twig', array(
+        $editForm->handleRequest($request);
+
+        if ($editForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($galerie);
+            $em->flush();
+
+            // return $this->redirect($this->generateUrl('gite_show', array('id' => $entity->getId())));
+        }
+
+        return $this->render('GalerieBundle:Galerie:edit.html.twig', array(
             'entity' => $galerie,
+            'galerie' => $galerie,
             'form' => $editForm->createView(),
         ));
     }

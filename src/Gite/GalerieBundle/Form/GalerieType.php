@@ -15,7 +15,11 @@ class GalerieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('images', 'collection', array('type' => new ImageType()))
+            /*->add('images', 'collection', array(
+                'type' => new ImageType(),
+                'allow_add' => true,
+                'by_reference' => false
+            ))*/
             ->add('name')
         ;
     }

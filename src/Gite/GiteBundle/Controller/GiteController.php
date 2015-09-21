@@ -20,8 +20,8 @@ class GiteController extends Controller
         $gite = $em->getRepository('GiteBundle:Gite')->find($id);
 
         return $this->render('GiteBundle:Gite:view.html.twig', array(
-'gite' => $gite,
-));
+            'gite' => $gite,
+        ));
     }
 
     public function ListGitesAction()
@@ -50,6 +50,7 @@ class GiteController extends Controller
             'entities' => $entities,
         ));
     }
+
     /**
      * Creates a new Gite entity.
      */
@@ -168,6 +169,7 @@ class GiteController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Gite entity.
      */
@@ -197,6 +199,7 @@ class GiteController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
+
     /**
      * Deletes a Gite entity.
      */
@@ -233,7 +236,6 @@ class GiteController extends Controller
             ->setAction($this->generateUrl('gite_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
-        ;
+            ->getForm();
     }
 }
