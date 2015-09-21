@@ -1,13 +1,13 @@
 {% extends "HomeBundle::Main/layout.html.twig" %}
 
 {% block body -%}
-    {{ form_start(form) }}
-    {{ form_errors(form) }}
+    {{ form_start(galleryForm) }}
+    {{ form_errors(galleryForm) }}
 
-    {{ form_row(form.name) }}
+    {{ form_row(galleryForm.name) }}
     <br>
 
-    {{ form_end(form) }}
+    {{ form_end(galleryForm) }}
 
     <h3>images</h3>
 
@@ -18,5 +18,11 @@
             <hr>
         {% endfor %}
     </ul>
+
+    {{ form_start(imageForm) }}
+    {{ form_errors(imageForm) }}
+    <br>
+
+    {{ form_end(imageForm) }}
 
 {% endblock %}
