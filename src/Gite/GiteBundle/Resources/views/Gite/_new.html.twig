@@ -1,5 +1,5 @@
-{% extends "HomeBundle::Main/layout.html.twig" %}
-{% block home_body %}
+{% extends "GiteBundle::Main/layout.html.twig" %}
+{% block gite_body %}
     <div class="row">
         {{ form_start(formulaire_gite) }}
         {{ form_errors(formulaire_gite) }}
@@ -13,4 +13,11 @@
         <br>
         {{ form_end(formulaire_gite) }}
     </div>
+{% endblock %}
+{% block js_footer %}
+<script type="text/javascript">
+        $(function(){
+
+        });
+</script>
 {% endblock %}
