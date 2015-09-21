@@ -14,7 +14,9 @@
     <ul class="images">
         {% for image in galerie.images %}
             <li>{{ image.alt }}</li>
-            <li>{{ image.url }}</li>
+            <li>
+                <img src="{{ asset('galeries/galerie_'~ galerie.id ~ '/' ~ image.url) | imagine_filter('my_thumb') }}"/>
+            </li>
             <hr>
         {% endfor %}
     </ul>

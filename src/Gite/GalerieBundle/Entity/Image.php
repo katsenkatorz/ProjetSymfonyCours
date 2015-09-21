@@ -156,20 +156,26 @@ class Image
         if (null === $this->file) {
             return;
         }
+        $newfile = $this->file->getClientOriginalName();
+        function wd_remove_accents($str, $charset = 'utf-8')
+        {
 
-        // utilisez le nom de fichier original ici mais
-        // vous devriez « l'assainir » pour au moins éviter
-        // quelconques problèmes de sécurité
+            $str = str_replace(' ', '_', $str);
+            $str = htmlentities($str, ENT_NOQUOTES, $charset);
+            $str = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $str);
+            $str = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $str); // pour les ligatures e.g. '&oelig;'
+            $str = preg_replace('#&[^;]+;#', '', $str); // supprime les autres caractères
+            $str = strtr($str,
+                'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
+                'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+            $str = preg_replace('/([^.a-z0-9]+)/i', '_', $str);
 
-        // la méthode « move » prend comme arguments le répertoire cible et
-        // le nom de fichier cible où le fichier doit être déplacé
-        $this->file->move($this->getUploadRootDir(), $this->file->getClientOriginalName());
+            return $str;
+        }
 
-        // définit la propriété « path » comme étant le nom de fichier où vous
-        // avez stocké le fichier
-        $this->url = $this->file->getClientOriginalName();
-
-        // « nettoie » la propriété « file » comme vous n'en aurez plus besoin
+        $fileName = wd_remove_accents($newfile);
+        $this->file->move($this->getUploadRootDir(), $fileName);
+        $this->url = $fileName;
         $this->file = null;
     }
 }
