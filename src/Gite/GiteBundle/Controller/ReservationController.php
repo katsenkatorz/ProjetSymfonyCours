@@ -88,6 +88,8 @@ class ReservationController extends Controller
 
         if ($formPreResa->isValid()) {
             $data = $formPreResa->getData();
+        }else{
+            return "LOLILOL";
         }
         $entity = new Reservation();
 

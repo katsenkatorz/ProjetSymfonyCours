@@ -15,45 +15,58 @@ class GalerieController extends Controller
         return $this->render('GalerieBundle:Default:index.html.twig');
     }
 
-        /**
-         * Creates a form to create a Galerie entity.
-         *
-         * @param Galerie $entity The entity
-         *
-         * @return \Symfony\Component\Form\Form The form
-         */
-        private function createCreateForm(Galerie $entity)
-        {
-            $form = $this->createForm(new GalerieType(), $entity, array(
-                'action' => $this->generateUrl('new_galerie'),
-                'method' => 'POST',
-            ));
+    /**
+     * Creates a form to create a Galerie entity.
+     *
+     * @param Galerie $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createCreateForm(Galerie $entity)
+    {
+        $form = $this->createForm(new GalerieType(), $entity, array(
+            'action' => $this->generateUrl('new_galerie'),
+            'method' => 'POST',
+        ));
 
-            $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Create'));
 
-            return $form;
+        return $form;
+    }
+
+    /**
+     * Displays a form to create a new Galerie entity.
+     */
+    public function editGalerieAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $gite = $em->getRepository('GiteBundle:Gite')->find($id);
+
+        // $gite = $repo->findOneById($id);
+
+        $galerie = $gite->getGalerie();
+
+        if (!$galerie) {
+            throw $this->createNotFoundException('Unable to find Gallery entity.');
         }
 
-        /**
-         * Displays a form to create a new Galerie entity.
-         */
-        public function editGalerieAction($id)
-        {
-            $em = $this->getDoctrine()->getManager();
-            $gite = $em->getRepository('GiteBundle:Gite')->find($id);
+        $editForm = $this->createEditForm($galerie, $id);
 
-            // $gite = $repo->findOneById($id);
+        return $this->render('GalerieBundle:Galerie:new.html.twig', array(
+            'entity' => $galerie,
+            'form' => $editForm->createView(),
+        ));
+    }
 
-            $galerie = $gite->getGalerie();
+    private function createEditForm(Galerie $entity, $id)
+    {
+        $form = $this->createForm(new GalerieType(), $entity, array(
+            'action' => $this->generateUrl('galerie_edit', array('id' => $id)),
+            'method' => 'POST',
+        ));
 
-            $form = $this->createForm(new GalerieType(), $galerie, array(
-                'action' => $this->generateUrl('galerie_edit', array('id' => $id)),
-                'method' => 'POST',
-            ));
+        $form->add('submit', 'submit', array('label' => 'Update'));
 
-            return $this->render('GalerieBundle:Galerie:new.html.twig', array(
-                'entity' => $galerie,
-                'form' => $form->createView(),
-            ));
-        }
+        return $form;
+    }
 }
