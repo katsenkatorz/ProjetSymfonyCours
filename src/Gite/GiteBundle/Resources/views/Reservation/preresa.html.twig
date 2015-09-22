@@ -1,20 +1,28 @@
-
 {% block body -%}
-    {{ form_start(pre_resa) }}
-    {{ form_errors(pre_resa) }}
 
-    {{ form_row(pre_resa.arrival, {
-        'attr': {
-            'class': 'col-md-6 datepicker form-control',
-            'data-date-format':'dd/mm/yyyy'
-        }
-    }) }}
-    {{ form_row(pre_resa.departure, {
-        'attr': {
-            'class': 'col-md-6 datepicker form-control',
-            'data-date-format':'dd/mm/yyyy'
-        }
-    }) }}
-    <br>
-    {{ form_end(pre_resa) }}
+{{ form_start(pre_resa) }}
+{{ form_errors(pre_resa) }}
+
+<div class="textfield js-textfield cell--6-col">
+	{{ form_widget(pre_resa.arrival, {
+            'attr': {
+                'class': 'textfield__input',
+                'data-date-format':'dd/mm/yyyy'
+            }
+        }) }}
+	{{ form_label(pre_resa.arrival, 'Arrivée', {'label_attr': {'class': 'textfield__label'}}) }}
+</div>
+<div class="textfield js-textfield cell--6-col">
+	{{ form_widget(pre_resa.departure, {
+            'attr': {
+                'class': 'textfield__input',
+                'data-date-format':'dd/mm/yyyy'
+            }
+        }) }}
+        {{ form_label(pre_resa.departure, 'Départ', {'label_attr': {'class': 'textfield__label'}}) }}
+</div>
+{{ form_widget(pre_resa.Reserver, { 'attr':{ 'class': 'button js-button button--raised button--colored js-ripple-effect cell--12-col' } }) }}
+<br>
+{{ form_end(pre_resa) }}
+
 {% endblock %}

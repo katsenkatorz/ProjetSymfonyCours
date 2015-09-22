@@ -1,5 +1,5 @@
 $(function() {
-  $('.datepicker').datepicker({
-    language: 'fr'
-  });
+  // $('.datepicker').datepicker({
+  //   language: 'fr'
+  // });
 })

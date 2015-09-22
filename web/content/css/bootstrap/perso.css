@@ -1,8 +1,0 @@
-@media screen and (min-width: 768px){
-	body .navbar{
-		border-radius: 0;
-	}
-	body .datepicker{
-		margin-top: 0;
-	}
-}

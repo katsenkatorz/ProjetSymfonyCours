@@ -1,6 +1,6 @@
 {% extends "GiteBundle::Main/layout.html.twig" %}
 {% block gite_body %}
-<h1>Les gites</h1>
+<!-- <h1>Les gites</h1> -->
 {{ render(controller('GiteBundle:Gite:getListGites')) }}
 <br>
 <a href="{{ path('gite_new') }}">

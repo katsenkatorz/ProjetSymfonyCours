@@ -157,25 +157,25 @@ class Image
             return;
         }
         $newfile = $this->file->getClientOriginalName();
-        function wd_remove_accents($str, $charset = 'utf-8')
-        {
-
-            $str = str_replace(' ', '_', $str);
-            $str = htmlentities($str, ENT_NOQUOTES, $charset);
-            $str = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $str);
-            $str = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $str); // pour les ligatures e.g. '&oelig;'
-            $str = preg_replace('#&[^;]+;#', '', $str); // supprime les autres caractères
-            $str = strtr($str,
-                'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
-                'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
-            $str = preg_replace('/([^.a-z0-9]+)/i', '_', $str);
-
-            return $str;
-        }
-
-        $fileName = wd_remove_accents($newfile);
+        $fileName = $this->wd_remove_accents($newfile);
         $this->file->move($this->getUploadRootDir(), $fileName);
         $this->url = $fileName;
         $this->file = null;
+    }
+
+    private function wd_remove_accents($str, $charset = 'utf-8')
+    {
+
+        $str = str_replace(' ', '_', $str);
+        $str = htmlentities($str, ENT_NOQUOTES, $charset);
+        $str = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $str);
+        $str = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $str); // pour les ligatures e.g. '&oelig;'
+        $str = preg_replace('#&[^;]+;#', '', $str); // supprime les autres caractères
+        $str = strtr($str,
+            'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
+            'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+        $str = preg_replace('/([^.a-z0-9]+)/i', '_', $str);
+
+        return uniqid()."_".$str;
     }
 }
