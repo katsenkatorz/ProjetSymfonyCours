@@ -1,6 +1,16 @@
 {% extends "GiteBundle::Main/layout.html.twig" %}
 {% block gite_body %}
 <div class="grid">
+	<ul class="cb-slideshow cell cell--12-col layout--large-screen-only">
+		{% for image in galerie.images %}
+		<li><img src="{{ asset('galeries/galerie_'~ galerie.id ~ '/' ~ image.url) | imagine_filter('full_screen') }}"/></li>
+		{% endfor %}
+	</ul>
+	<div class="cell cell--12-col layout--small-screen-only">
+		{% for image in galerie.images | slice (1,1) %}
+		<img src="{{ asset('galeries/galerie_'~ galerie.id ~ '/' ~ image.url) | imagine_filter('full_screen') }}"/>
+		{% endfor %}
+	</div>
 	<div class="cell cell--12-col">
 		<h1>{{ gite.name|raw }}</h1>
 	</div>
@@ -13,6 +23,9 @@
 	<div class="cell cell--4-col">
 		<div class="grid">
 			{{ render(controller('GiteBundle:Reservation:preresa', {'idGite' : gite.id})) }}
+			<div class="cell cell--12-col t_center">
+				<strong>A partir de {{ gite.prix }}€</strong>
+			</div>
 		</div>
 	</div>
 </div>

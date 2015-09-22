@@ -44,6 +44,13 @@ class Gite
     private $options;
 
     /**
+     * @var float
+     *
+     * @ORM\Column(name="prix", type="float")
+     */
+    private $prix;
+
+    /**
      * @ORM\OneToOne(targetEntity="Gite\GalerieBundle\Entity\Galerie", cascade="persist")
      */
     private $galerie;
@@ -158,5 +165,28 @@ class Gite
     public function getGalerie()
     {
         return $this->galerie;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param float $prix
+     * @return Gite
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return float 
+     */
+    public function getPrix()
+    {
+        return $this->prix;
     }
 }

@@ -18,9 +18,11 @@ class GiteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->find($id);
+        $galerie = $gite->getGalerie();
 
         return $this->render('GiteBundle:Gite:view.html.twig', array(
             'gite' => $gite,
+            'galerie' => $galerie,
         ));
     }
 
