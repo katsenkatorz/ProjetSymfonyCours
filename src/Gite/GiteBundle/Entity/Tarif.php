@@ -36,14 +36,14 @@ class Tarif
     private $price;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="startDate", type="date")
      */
     private $startDate;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="endDate", type="date")
      */
@@ -53,7 +53,7 @@ class Tarif
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -76,7 +76,7 @@ class Tarif
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -99,7 +99,7 @@ class Tarif
     /**
      * Get price
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getPrice()
     {
@@ -109,7 +109,7 @@ class Tarif
     /**
      * Set startDate
      *
-     * @param \DateTime $startDate
+     * @param \Date $startDate
      * @return Tarif
      */
     public function setStartDate($startDate)
@@ -122,7 +122,7 @@ class Tarif
     /**
      * Get startDate
      *
-     * @return \DateTime 
+     * @return \Date
      */
     public function getStartDate()
     {
@@ -132,7 +132,7 @@ class Tarif
     /**
      * Set endDate
      *
-     * @param \DateTime $endDate
+     * @param \Date $endDate
      * @return Tarif
      */
     public function setEndDate($endDate)
@@ -145,7 +145,7 @@ class Tarif
     /**
      * Get endDate
      *
-     * @return \DateTime 
+     * @return \Date
      */
     public function getEndDate()
     {

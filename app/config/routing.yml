@@ -11,7 +11,7 @@ galerie:
     prefix:   /
 
 home:
-    resource: "@HomeBundle/Resources/config/routing.yml"
+    resource: "@MainBundle/Resources/config/routing.yml"
     prefix:   /
 
 gite:

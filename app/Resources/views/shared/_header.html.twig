@@ -1,21 +1,26 @@
 <header class="layout__header">
-	<div class="layout__header-row">
-		<span class="layout-title">Gites de Ouf</span>
-		<div class="layout-spacer"></div>
-		<nav class="navigation layout--large-screen-only">
-			<a class="navigation__link" href="{{ path('home_homepage') }}">Accueil</a>
-			<a class="navigation__link" href="{{ path('gite_listview') }}">Les gites</a>
-			<a class="navigation__link" href="">Link</a>
-			<a class="navigation__link" href="">Link</a>
-		</nav>
-	</div>
+    <div class="layout__header-row">
+        <span class="layout-title">Gites de Ouf</span>
+
+        <div class="layout-spacer"></div>
+        <nav class="navigation layout--large-screen-only">
+            <a class="navigation__link" href="{{ path('home_homepage') }}">Accueil</a>
+            <a class="navigation__link" href="{{ path('gite_listview') }}">Les gites</a>
+            <a class="navigation__link" href="{{ path('gite_listview') }}">Nos tarifs</a>
+            <a class="navigation__link" href="{{ path('gite_listview') }}">Déscriptif</a>
+            <a class="navigation__link" href="{{ path('gite_listview') }}">Activités</a>
+            <a class="navigation__link" href="{{ path('gite_listview') }}">Nous Contacter</a>
+        </nav>
+    </div>
 </header>
 <div class="layout__drawer layout--small-screen-only">
-	<span class="layout-title">Gite de ouf</span>
-	<nav class="navigation">
-		<a class="navigation__link" href="{{ path('home_homepage') }}">Accueil</a>
-		<a class="navigation__link" href="{{ path('gite_listview') }}">Les gites</a>
-		<a class="navigation__link" href="">Link</a>
-		<a class="navigation__link" href="">Link</a>
-	</nav>
+    <span class="layout-title">Gite de ouf</span>
+    <nav class="navigation">
+        <a class="navigation__link" href="{{ path('home_homepage') }}">Accueil</a>
+        <a class="navigation__link" href="{{ path('gite_listview') }}">Les gites</a>
+        <a class="navigation__link" href="{{ path('gite_listview') }}">Nos tarifs</a>
+        <a class="navigation__link" href="{{ path('gite_listview') }}">Déscriptif</a>
+        <a class="navigation__link" href="{{ path('gite_listview') }}">Activités</a>
+        <a class="navigation__link" href="{{ path('gite_listview') }}">Nous Contacter</a>
+    </nav>
 </div>

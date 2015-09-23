@@ -19,25 +19,20 @@ class GiteController extends Controller
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->find($id);
         $galerie = $gite->getGalerie();
-
         return $this->render('GiteBundle:Gite:view.html.twig', array(
             'gite' => $gite,
             'galerie' => $galerie,
         ));
     }
-
-    public function ListGitesAction()
-    {
-        return $this->render('GiteBundle:Gite:listview.html.twig');
-    }
-
     public function getListGitesAction()
     {
         $em = $this->getDoctrine()->getManager();
         $gites = $em->getRepository('GiteBundle:Gite')->findAll();
-
-        return $this->render('GiteBundle:ModuleUsed:listgite.html.twig', array('gites' => $gites));
+        return $this->render('GiteBundle:Gite:listview.html.twig', array(
+            'gites' => $gites
+        ));
     }
+
 
     /**
      * Lists all Gite entities.
