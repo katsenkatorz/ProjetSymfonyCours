@@ -22,14 +22,14 @@ class Reservation
     private $id;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="arrival", type="date")
      */
     private $arrival;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="departure", type="date")
      */
@@ -67,7 +67,7 @@ class Reservation
     /**
      * Set arrival
      *
-     * @param \DateTime $arrival
+     * @param \Date $arrival
      * @return Reservation
      */
     public function setArrival($arrival)
@@ -80,7 +80,7 @@ class Reservation
     /**
      * Get arrival
      *
-     * @return \DateTime
+     * @return \Date
      */
     public function getArrival()
     {
@@ -90,7 +90,7 @@ class Reservation
     /**
      * Set departure
      *
-     * @param \DateTime $departure
+     * @param \Date $departure
      * @return Reservation
      */
     public function setDeparture($departure)
@@ -103,7 +103,7 @@ class Reservation
     /**
      * Get departure
      *
-     * @return \DateTime
+     * @return \Date
      */
     public function getDeparture()
     {

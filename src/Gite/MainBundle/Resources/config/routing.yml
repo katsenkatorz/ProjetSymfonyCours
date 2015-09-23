@@ -1,0 +1,7 @@
+home_homepage:
+    path:     /
+    defaults: { _controller: MainBundle:Index:index }
+
+admin_homepage:
+    path:     /dash/
+    defaults: { _controller: MainBundle:Index:indexAdmin }

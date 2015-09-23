@@ -18,7 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Gite\GiteBundle\GiteBundle(),
             new Gite\GalerieBundle\GalerieBundle(),
-            new Gite\HomeBundle\HomeBundle(),
+            new Gite\MainBundle\MainBundle(),
             new Gite\ContactBundle\ContactBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
         );

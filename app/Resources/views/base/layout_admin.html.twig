@@ -16,13 +16,13 @@
 	</head>
 	<body>
 		<div class="layout js-layout layout--fixed-header">
-			{% include("::shared/_header.html.twig") %}
+			{% include("::shared/_header_admin.html.twig") %}
 			<main class="layout__content">
 				<div class="page-content">
 					{% block body %}{% endblock %}
 				</div>
 			</main>
-            {% include("::shared/_footer.html.twig") %}
+            {% include("::shared/_footer_admin.html.twig") %}
 		</div>
 		{% block javascripts %}
 		<script src="{{ asset('content/js/material-design-lite/material.min.js') }}"></script>

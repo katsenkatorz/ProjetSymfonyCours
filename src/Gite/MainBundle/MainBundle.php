@@ -1,9 +1,9 @@
 <?php
 
-namespace Gite\HomeBundle;
+namespace Gite\MainBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class HomeBundle extends Bundle
+class MainBundle extends Bundle
 {
 }

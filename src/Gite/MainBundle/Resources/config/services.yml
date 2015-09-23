@@ -1,4 +1,4 @@
 services:
 #    home.example:
-#        class: Gite\HomeBundle\Example
+#        class: Gite\MainBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
