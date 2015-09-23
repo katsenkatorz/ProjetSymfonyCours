@@ -60,7 +60,7 @@ class GalerieController extends Controller
             $em->persist($galerie);
             $em->flush();
         }
-
+        
         // Image
         $image = new Image();
         $imageForm = $this->createForm(new ImageType(), $image, array(
@@ -76,7 +76,6 @@ class GalerieController extends Controller
             $em->flush();
         }
 
-
         return $this->render('GalerieBundle:Galerie:edit.html.twig', array(
             'entity' => $galerie,
             'galerie' => $galerie,
@@ -84,5 +83,4 @@ class GalerieController extends Controller
             'imageForm' => $imageForm->createView(),
         ));
     }
-
 }

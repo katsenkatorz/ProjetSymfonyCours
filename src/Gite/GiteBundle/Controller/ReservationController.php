@@ -98,31 +98,17 @@ class ReservationController extends Controller
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->findOneById($giteId);
 
-        $entity->setArrival($data['arrival']);
-        $entity->setDeparture($data['departure']);
+        $arrival = substr($data['date'], 0, -13);
+        $departure = substr($data['date'], -10, 10);
+
+        $entity->setArrival(str_replace('/','-',$arrival));
+        $entity->setDeparture(str_replace('/','-',$departure));
         $entity->setGite($gite);
 
         $form = $this->createCreateForm($entity);
         return $this->render('GiteBundle:Reservation:new.html.twig', array(
             'entity' => $entity,
             'form' => $form->createView(),
-        ));
-    }
-
-
-    /**
-     * Displays a form to create a new Reservation entity.
-     *
-     */
-    public function preresaAction($idGite)
-    {
-
-        $defaultData = array('message' => 'Type your message here');
-
-        $form = $this->formPreResa($defaultData, $idGite);
-
-        return $this->render('GiteBundle:Reservation:preresa.html.twig', array(
-            'pre_resa' => $form->createView(),
         ));
     }
 
@@ -246,12 +232,29 @@ class ReservationController extends Controller
         return $this->redirect($this->generateUrl('reservation'));
     }
 
+    /**
+     * Displays a form to create a new Reservation entity.
+     *
+     */
+    public function preresaAction($idGite)
+    {
+
+        $defaultData = array('message' => 'Type your message here');
+
+        $form = $this->formPreResa($defaultData, $idGite);
+
+        return $this->render('GiteBundle:Reservation:preresa.html.twig', array(
+            'pre_resa' => $form->createView(),
+        ));
+    }
+
     private function formPreResa($defaultData, $idGite=null)
     {
         return $this->createFormBuilder($defaultData)
             ->setAction($this->generateUrl('reservation_new'))
-            ->add('arrival', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
-            ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
+            ->add('date', 'text')
+            // ->add('arrival', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
+            // ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
             ->add('idGite', 'hidden',array(
                 'data' => $idGite
             ))

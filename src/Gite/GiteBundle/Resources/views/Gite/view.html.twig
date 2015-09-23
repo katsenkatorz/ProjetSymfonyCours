@@ -1,7 +1,7 @@
 {% extends "GiteBundle::Main/layout.html.twig" %}
 {% block gite_body %}
 <div class="grid">
-	{% if galerie.images %}
+	{% if galerie %}
 		<ul class="cb-slideshow cell cell--12-col layout--large-screen-only">
 
 			{% for image in galerie.images %}
