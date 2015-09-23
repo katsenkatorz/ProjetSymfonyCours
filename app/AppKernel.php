@@ -21,6 +21,8 @@ class AppKernel extends Kernel
             new Gite\HomeBundle\HomeBundle(),
             new Gite\ContactBundle\ContactBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
+            new User\UserBundle\UserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
