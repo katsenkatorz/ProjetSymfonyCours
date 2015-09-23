@@ -43,7 +43,7 @@ class GiteController extends Controller
 
         $entities = $em->getRepository('GiteBundle:Gite')->findAll();
 
-        return $this->render('GiteBundle:Gite:index.html.twig', array(
+        return $this->render('GiteBundle:GiteAdmin:index.html.twig', array(
             'entities' => $entities,
         ));
     }
@@ -119,7 +119,7 @@ class GiteController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('GiteBundle:Gite:show.html.twig', array(
+        return $this->render('GiteBundle:GiteAdmin:show.html.twig', array(
             'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -141,7 +141,7 @@ class GiteController extends Controller
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('GiteBundle:Gite:edit.html.twig', array(
+        return $this->render('GiteBundle:GiteAdmin:edit.html.twig', array(
             'entity' => $entity,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -190,7 +190,7 @@ class GiteController extends Controller
             return $this->redirect($this->generateUrl('gite_edit', array('id' => $id)));
         }
 
-        return $this->render('GiteBundle:Gite:edit.html.twig', array(
+        return $this->render('GiteBundle:GiteAdmin:edit.html.twig', array(
             'entity' => $entity,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

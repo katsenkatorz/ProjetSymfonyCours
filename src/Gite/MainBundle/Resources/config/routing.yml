@@ -4,4 +4,4 @@ home_homepage:
 
 admin_homepage:
     path:     /dash/
-    defaults: { _controller: MainBundle:Index:admin }
+    defaults: { _controller: MainBundle:Index:indexAdmin }

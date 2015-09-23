@@ -19,6 +19,6 @@ class IndexController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $gites = $em->getRepository('GiteBundle:Gite')->findAll();
-        return $this->render('MainBundle:Home:index_admin.html.twig', array('gites' => $gites));
+        return $this->render('MainBundle:Index:index_admin.html.twig', array('gites' => $gites));
     }
 }

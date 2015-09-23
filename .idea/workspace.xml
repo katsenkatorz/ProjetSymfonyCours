@@ -2,99 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21871b38-bab7-448c-9c95-ef725e599ccc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/Group.couchdb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/Group.mongodb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/Group.orm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/User.couchdb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/User.mongodb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/User.orm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/shared/_footer_admin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/shared/_header_admin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/change_password.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/change_password.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/couchdb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/storage-validation/couchdb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/couchdb_group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/css/datepicker/daterangepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/js/datepicker/daterangepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/email_confirmation.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/flash_notifications.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Index/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Index/index_admin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/base/layout_admin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Main/layout_admin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/listeners.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/mailer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/content/js/datepicker/moment.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/mongodb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/storage-validation/mongodb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/mongodb_group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/orm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/storage-validation/orm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/orm_group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/profile.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/profile.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/propel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/storage-validation/propel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/propel_group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/registration.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/registration.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/resetting.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/resetting.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/propel/schema.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/security.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/username_form_type.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/util.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/validation.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/validator.xml" />
-      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\app\Resources\views\default\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\GiteBundle\Resources\views\Gite\_new.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\GiteBundle\Resources\views\Main\layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\Resources\views\Index\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\web\content\css\bootstrap-material-datetimepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\web\content\js\bootstrap-material-datetimepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\web\content\js\moment\moment.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\GiteBundle\Resources\views\ModuleUsed\listgite.html.twig" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GalerieBundle/Controller/GalerieController.php" afterPath="$PROJECT_DIR$/src/Gite/GalerieBundle/Controller/GalerieController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Controller/GiteController.php" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Controller/GiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Entity/Reservation.php" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Entity/Reservation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Controller/ReservationController.php" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Controller/ReservationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Entity/Tarif.php" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Entity/Tarif.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/User/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/User/UserBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/shared/_header.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/shared/_header.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/css/app.min.css" afterPath="$PROJECT_DIR$/web/content/css/app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/css/app.scss" afterPath="$PROJECT_DIR$/web/content/css/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/controller.xml" afterPath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/controller.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/listview.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/listview.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/content/js/main.js" afterPath="$PROJECT_DIR$/web/content/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Reservation/preresa.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Reservation/preresa.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/filters/sass.xml" afterPath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/filters/sass.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/filters/scss.xml" afterPath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/filters/scss.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/templating_php.xml" afterPath="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Resources/config/templating_php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/view.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/MainBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base/layout_admin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base/layout_admin.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\GiteBundle\Resources\views\Gite\edit.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\GiteBundle\Resources\views\Gite\index.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\GiteBundle\Resources\views\Gite\new.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\GiteBundle\Resources\views\Gite\show.html.twig" afterPath="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\Controller\IndexController.php" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Controller/IndexController.php" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\DependencyInjection\Configuration.php" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/DependencyInjection/Configuration.php" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\DependencyInjection\HomeExtension.php" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/DependencyInjection/HomeExtension.php" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\HomeBundle.php" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/MainBundle.php" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\Resources\config\routing.yml" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/routing.yml" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\Resources\config\services.yml" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/services.yml" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\Resources\doc\index.rst" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/doc/index.rst" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\Resources\translations\messages.fr.xlf" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/translations/messages.fr.xlf" />
-      <change type="MOVED" beforePath="D:\Serveur\wamp\www\ProjetSymfonyCours\src\Gite\HomeBundle\Resources\views\Main\layout.html.twig" afterPath="$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Main/layout.html.twig" />
     </list>
     <ignored path="ProjetSymfonyCours.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,25 +36,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="listview.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/listview.html.twig">
+      <file leaf-file-name="GiteController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Controller/GiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.46153846" vertical-offset="3456" max-vertical-offset="4392">
+              <caret line="216" column="25" selection-start-line="216" selection-start-column="25" selection-end-line="216" selection-end-column="25" />
               <folding>
-                <element signature="e#12#44#0#Twig" expanded="true" />
-                <element signature="e#196#205#0#Twig" expanded="true" />
+                <element signature="e#46#91#0#PHP" expanded="true" />
+                <element signature="e#617#649#0#PHP" expanded="true" />
+                <element signature="e#933#969#0#PHP" expanded="true" />
+                <element signature="e#1267#1305#0#PHP" expanded="true" />
+                <element signature="e#3285#3322#0#PHP" expanded="true" />
+                <element signature="e#3923#3960#0#PHP" expanded="true" />
+                <element signature="e#5269#5280#0#PHP" expanded="true" />
+                <element signature="e#5344#5381#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -145,8 +59,10 @@
         <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-              <folding />
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#12#51#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,8 +71,10 @@
         <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-              <folding />
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#12#51#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,25 +83,20 @@
         <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding>
-                <element signature="e#12#45#0#Twig" expanded="true" />
+                <element signature="e#12#51#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Controller/IndexController.php">
+      <file leaf-file-name="gite.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/config/routing/gite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="e#274#291#1#PHP" expanded="true" />
-                <element signature="e#335#369#0#PHP" expanded="true" />
-                <element signature="e#537#554#1#PHP" expanded="true" />
-                <element signature="e#597#636#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -198,45 +111,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/view.html.twig">
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9413681" vertical-offset="376" max-vertical-offset="1062">
-              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding>
-                <element signature="e#12#44#0#Twig" expanded="true" />
+                <element signature="e#12#51#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GiteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Controller/GiteController.php">
+      <file leaf-file-name="index_admin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Index/index_admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.793103" vertical-offset="0" max-vertical-offset="4392">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding>
-                <element signature="e#46#91#0#PHP" expanded="true" />
-                <element signature="e#517#534#1#PHP" expanded="true" />
-                <element signature="e#617#649#0#PHP" expanded="true" />
-                <element signature="e#873#890#1#PHP" expanded="true" />
-                <element signature="e#933#969#0#PHP" expanded="true" />
-                <element signature="e#1206#1223#1#PHP" expanded="true" />
-                <element signature="e#3050#3067#1#PHP" expanded="true" />
-                <element signature="e#3631#3648#1#PHP" expanded="true" />
-                <element signature="e#4840#4857#1#PHP" expanded="true" />
-                <element signature="e#5852#5869#1#PHP" expanded="true" />
+                <element signature="e#12#50#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/routing.yml">
+      <file leaf-file-name="layout_admin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Main/layout_admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout_admin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base/layout_admin.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding>
+                <element signature="e#908#940#0#Twig" expanded="true" />
+                <element signature="e#1093#1125#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -260,20 +177,21 @@
         <option value="$PROJECT_DIR$/app/Resources/views/shared/_footer_admin.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/shared/_header_admin.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/shared/_header.html.twig" />
-        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Controller/GiteController.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/Gite/MainBundle/MainBundle.php" />
         <option value="$PROJECT_DIR$/src/Gite/MainBundle/DependencyInjection/Configuration.php" />
         <option value="$PROJECT_DIR$/src/Gite/MainBundle/DependencyInjection/HomeExtension.php" />
-        <option value="$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Gite/MainBundle/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/listview.html.twig" />
         <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/Gite/MainBundle/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base/layout_admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Gite/GiteBundle/Controller/GiteController.php" />
       </list>
     </option>
   </component>
@@ -282,9 +200,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1039" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -479,6 +398,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjetSymfonyCours" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjetSymfonyCours" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -594,14 +543,6 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -626,6 +567,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -656,6 +601,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -787,24 +736,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetSymfonyCours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetSymfonyCours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -913,12 +844,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1039" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32958034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242699" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -930,7 +861,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3368644" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.165625" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1058,39 +989,15 @@
         <state vertical-scroll-proportion="0.7389163" vertical-offset="0" max-vertical-offset="609">
           <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
           <folding>
-            <element signature="e#281#294#0#Twig" expanded="true" />
-            <element signature="e#368#381#0#Twig" expanded="true" />
-            <element signature="e#457#470#0#Twig" expanded="true" />
-            <element signature="e#547#560#0#Twig" expanded="true" />
-            <element signature="e#637#650#0#Twig" expanded="true" />
-            <element signature="e#726#739#0#Twig" expanded="true" />
-            <element signature="e#986#999#0#Twig" expanded="true" />
-            <element signature="e#1069#1082#0#Twig" expanded="true" />
-            <element signature="e#1154#1167#0#Twig" expanded="true" />
-            <element signature="e#1240#1253#0#Twig" expanded="true" />
-            <element signature="e#1326#1339#0#Twig" expanded="true" />
-            <element signature="e#1411#1424#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/shared/_header_admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7389163" vertical-offset="0" max-vertical-offset="609">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-          <folding>
-            <element signature="e#281#294#0#Twig" expanded="true" />
-            <element signature="e#368#372#0#Twig" expanded="true" />
-            <element signature="e#448#452#0#Twig" expanded="true" />
-            <element signature="e#529#542#0#Twig" expanded="true" />
-            <element signature="e#619#632#0#Twig" expanded="true" />
-            <element signature="e#708#721#0#Twig" expanded="true" />
-            <element signature="e#968#981#0#Twig" expanded="true" />
-            <element signature="e#1051#1055#0#Twig" expanded="true" />
-            <element signature="e#1127#1131#0#Twig" expanded="true" />
-            <element signature="e#1204#1208#0#Twig" expanded="true" />
-            <element signature="e#1281#1294#0#Twig" expanded="true" />
-            <element signature="e#1366#1379#0#Twig" expanded="true" />
+            <element signature="e#457#470#0#Twig" expanded="false" />
+            <element signature="e#637#650#0#Twig" expanded="false" />
+            <element signature="e#726#739#0#Twig" expanded="false" />
+            <element signature="e#986#999#0#Twig" expanded="false" />
+            <element signature="e#1069#1082#0#Twig" expanded="false" />
+            <element signature="e#1154#1167#0#Twig" expanded="false" />
+            <element signature="e#1240#1253#0#Twig" expanded="false" />
+            <element signature="e#1326#1339#0#Twig" expanded="false" />
+            <element signature="e#1411#1424#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1113,14 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base/layout_admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
@@ -1137,33 +1036,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Main/layout_admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#41#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Index/index_admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding>
-            <element signature="e#12#50#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Index/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
-            <element signature="e#12#44#0#Twig" expanded="true" />
-            <element signature="e#196#205#0#Twig" expanded="true" />
+            <element signature="e#12#44#0#Twig" expanded="false" />
+            <element signature="e#196#205#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1184,23 +1063,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/listview.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#12#44#0#Twig" expanded="false" />
+            <element signature="e#196#205#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45906734" vertical-offset="97" max-vertical-offset="1062">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="e#12#44#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/shared/_header_admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="e#281#294#0#Twig" expanded="false" />
+            <element signature="e#368#372#0#Twig" expanded="false" />
+            <element signature="e#448#452#0#Twig" expanded="false" />
+            <element signature="e#529#542#0#Twig" expanded="false" />
+            <element signature="e#619#632#0#Twig" expanded="false" />
+            <element signature="e#708#721#0#Twig" expanded="false" />
+            <element signature="e#968#981#0#Twig" expanded="false" />
+            <element signature="e#1051#1055#0#Twig" expanded="false" />
+            <element signature="e#1127#1131#0#Twig" expanded="false" />
+            <element signature="e#1204#1208#0#Twig" expanded="false" />
+            <element signature="e#1281#1294#0#Twig" expanded="false" />
+            <element signature="e#1366#1379#0#Twig" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="58" />
           <folding>
-            <element signature="e#274#291#1#PHP" expanded="true" />
             <element signature="e#335#369#0#PHP" expanded="true" />
-            <element signature="e#537#554#1#PHP" expanded="true" />
-            <element signature="e#597#636#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Index/index_admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding>
+            <element signature="e#12#50#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/MainBundle/Resources/views/Main/layout_admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base/layout_admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="e#908#940#0#Twig" expanded="true" />
+            <element signature="e#1093#1125#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#51#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#51#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#51#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#51#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1213,76 +1200,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/config/routing/gite.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Controller/GiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.793103" vertical-offset="0" max-vertical-offset="4392">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.46153846" vertical-offset="3456" max-vertical-offset="4392">
+          <caret line="216" column="25" selection-start-line="216" selection-start-column="25" selection-end-line="216" selection-end-column="25" />
           <folding>
             <element signature="e#46#91#0#PHP" expanded="true" />
-            <element signature="e#517#534#1#PHP" expanded="true" />
             <element signature="e#617#649#0#PHP" expanded="true" />
-            <element signature="e#873#890#1#PHP" expanded="true" />
             <element signature="e#933#969#0#PHP" expanded="true" />
-            <element signature="e#1206#1223#1#PHP" expanded="true" />
-            <element signature="e#3050#3067#1#PHP" expanded="true" />
-            <element signature="e#3631#3648#1#PHP" expanded="true" />
-            <element signature="e#4840#4857#1#PHP" expanded="true" />
-            <element signature="e#5852#5869#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/GiteAdmin/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#12#45#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/listview.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#44#0#Twig" expanded="true" />
-            <element signature="e#196#205#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gite/GiteBundle/Resources/views/Gite/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9413681" vertical-offset="376" max-vertical-offset="1062">
-          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#44#0#Twig" expanded="true" />
+            <element signature="e#1267#1305#0#PHP" expanded="true" />
+            <element signature="e#3285#3322#0#PHP" expanded="true" />
+            <element signature="e#3923#3960#0#PHP" expanded="true" />
+            <element signature="e#5269#5280#0#PHP" expanded="true" />
+            <element signature="e#5344#5381#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
