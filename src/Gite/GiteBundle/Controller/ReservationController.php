@@ -89,7 +89,7 @@ class ReservationController extends Controller
         if ($formPreResa->isValid()) {
             $data = $formPreResa->getData();
         }else{
-            return "LOLILOL";
+            return "Le format de date n'est pas correct.";
         }
         $entity = new Reservation();
 

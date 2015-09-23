@@ -19,6 +19,7 @@ class GiteType extends AbstractType
             ->add('content')
             ->add('options')
             ->add('prix')
+            ->add('capacity')
             // ->add('galerie')
         ;
     }

@@ -51,6 +51,13 @@ class Gite
     private $prix;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="capacity", type="integer")
+     */
+    private $capacity;
+
+    /**
      * @ORM\OneToOne(targetEntity="Gite\GalerieBundle\Entity\Galerie", cascade="persist")
      */
     private $galerie;
@@ -183,10 +190,33 @@ class Gite
     /**
      * Get prix
      *
-     * @return float 
+     * @return float
      */
     public function getPrix()
     {
         return $this->prix;
+    }
+
+    /**
+     * Set capacity
+     *
+     * @param integer $capacity
+     * @return Gite
+     */
+    public function setCapacity($capacity)
+    {
+        $this->capacity = $capacity;
+
+        return $this;
+    }
+
+    /**
+     * Get capacity
+     *
+     * @return integer 
+     */
+    public function getCapacity()
+    {
+        return $this->capacity;
     }
 }

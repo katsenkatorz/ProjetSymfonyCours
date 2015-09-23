@@ -1,5 +1,3 @@
 $(function() {
-  // $('.datepicker').datepicker({
-  //   language: 'fr'
-  // });
+  $('.textfield__input.date').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
 })
