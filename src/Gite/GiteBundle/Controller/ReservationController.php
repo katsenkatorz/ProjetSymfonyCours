@@ -101,8 +101,8 @@ class ReservationController extends Controller
         $arrival = substr($data['date'], 0, -13);
         $departure = substr($data['date'], -10, 10);
 
-        $entity->setArrival(str_replace('/','-',$arrival));
-        $entity->setDeparture(str_replace('/','-',$departure));
+        $entity->setArrival(new \DateTime(str_replace('/','-',$arrival)));
+        $entity->setDeparture(new \DateTime(str_replace('/','-',$departure)));
         $entity->setGite($gite);
 
         $form = $this->createCreateForm($entity);
