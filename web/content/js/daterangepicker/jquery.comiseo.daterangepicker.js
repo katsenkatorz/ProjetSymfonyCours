@@ -153,8 +153,8 @@
 
         function init() {
             fixReferences();
-            $self = $('<button type="button"></button>')
-                .addClass(classnameContext + '-triggerbutton')
+            $self = $('<input type="text">')
+                .addClass('textfield__input date')
                 .attr({'title': $originalElement.attr('title'), 'tabindex': $originalElement.attr('tabindex'), id: id})
                 .button({
                     icons: {
@@ -454,7 +454,7 @@
      * @param {Object} options
      */
     function buildDateRangePicker($originalElement, options) {
-        var classname = 'comiseo-daterangepicker',
+        var classname = 'mdtp',
             $container, // the dropdown
             $mask, // ui helper (z-index fix)
             triggerButton,

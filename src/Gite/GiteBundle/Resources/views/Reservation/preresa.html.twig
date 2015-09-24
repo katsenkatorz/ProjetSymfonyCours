@@ -12,6 +12,7 @@
         }) }}
         {{ form_label(pre_resa.date, 'Arrivée - Départ', {'label_attr': {'class': 'textfield__label'}}) }}
     </div>
+    {{ form_widget(pre_resa.Reserver, {'attr': {'class': 'cell cell--12-col button js-button button--raised button--colored'}}) }}
     {{ form_end(pre_resa) }}
 
 {% endblock %}
