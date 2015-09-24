@@ -6,13 +6,18 @@
 		<title>{% block title %}Domaine des Ducs !{% endblock %}</title>
 		{% block stylesheets %}
 		<link href="{{ asset('content/css/material-design-lite/material.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('content/js/jquery-ui/jquery-ui.css') }}" rel="stylesheet">
+		<link href="{{ asset('content/js/jquery-ui/jquery-ui.structure.css') }}" rel="stylesheet">
+		<link href="{{ asset('content/js/jquery-ui/jquery-ui.theme.css') }}" rel="stylesheet">
 		<link href="{{ asset('favicon.ico') }}" rel="icon" type="image/x-icon"/>
 		<link href="{{ asset('content/css/datepicker/daterangepicker.css') }}" rel="stylesheet">
 		<link href="{{ asset('content/css/app.min.css') }}" rel="stylesheet">
 		{% endblock %}
 		<script src="{{ asset('content/js/jquery-2.1.4.min.js') }}"></script>
 		<script src="{{ asset('content/js/datepicker/moment.min.js') }}"></script>
-		<script src="{{ asset('content/js/datepicker/daterangepicker.js') }}"></script>
+		<script src="{{ asset('content/js/jquery-ui/jquery-ui.js') }}"></script>
+		{#<script src="{{ asset('content/js/datepicker/daterangepicker.js') }}"></script>#}
+        {#<script src="{{ asset('content/js/test.js') }}"></script>#}
 	</head>
 	<body>
 		<div class="layout js-layout layout--fixed-header">
