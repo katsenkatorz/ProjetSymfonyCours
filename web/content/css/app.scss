@@ -5,7 +5,6 @@
     font-weight: 400;
     src: local('Material Icons'), local('MaterialIcons-Regular'), url("../fonts/MaterialIcons-Regular.woff2") format('woff2');
 }
-
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -391,7 +390,7 @@ a.ui-state-default.ui-state-active {
 }
 .mdtp div.mdtp-actual-year {
     font-size: 1.5em;
-    color: #DCEDC8;
+    color: #00BBAB;
 }
 .mdtp .mdtp-close {
     position: absolute;
@@ -482,3 +481,20 @@ td.ui-datepicker-unselectable.ui-state-disabled.reserved span {
 .ui-datepicker .ui-datepicker-prev {
     left: 10px;
 }
+a.mdtp-select-month-after, a.mdtp-select-month-before{
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+}
+a.mdtp-select-month-before{
+    top: 35px;
+    left: 10px;
+}
+a.mdtp-select-month-after{
+    top: 35px;
+    right: 10px;
+}
+div.mdtp-close a{ color: #00BBAB}
+
+
+
