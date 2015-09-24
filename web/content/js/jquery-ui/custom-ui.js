@@ -5506,7 +5506,6 @@
             selectOtherMonths = this._get(inst, "selectOtherMonths");
             defaultDate = this._getDefaultDate(inst);
             html = "";
-            console.log('here');
             html += prev;
             html += next;
             dow;
@@ -5605,6 +5604,7 @@
                 }
                 html += group;
             }
+
             html += buttonPanel;
             inst._keyEvent = false;
             return html;

@@ -7,6 +7,9 @@ $(function () {
     var first_day = '.first_day';
     var second_day = '.second_day';
 
+    var startDate = "2015-09-26";
+    var endDate = "2015-09-28";
+
     function convertDate(date) {
         var dd = date.getDate();
         var mm = date.getMonth() + 1;
@@ -24,10 +27,8 @@ $(function () {
     var todayDate = new Date();
     todayDate.setHours(00);
 
-    var startDate = "2015-09-25", // some start date
-        endDate = "2015-09-28",  // some end date
-        dateRange = [];           // array to hold the range
 
+    var dateRange = [];
     for (var d = new Date(startDate); d <= new Date(endDate); d.setDate(d.getDate() + 1)) {
         dateRange.push($.datepicker.formatDate('dd-mm-yy', d));
     }
@@ -117,6 +118,5 @@ $(function () {
             console.log("false");
         }
     }
-
 });
 

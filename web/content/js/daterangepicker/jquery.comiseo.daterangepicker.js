@@ -292,9 +292,10 @@
         // called for each day in the datepicker before it is displayed
 
         function beforeShowDay(date) {
+            var hasRange = false;
 
-            function hasRange() {
-                if (range.start && range.end) {
+            function hasRangeFn() {
+                if ((range.start && range.end)) {
                     if (range.start <= range.end) {
                         return true
                     }
@@ -307,7 +308,7 @@
                 }
             }
 
-            var hasRange = hasRange();
+            hasRange = hasRangeFn();
 
             var result = [
                     true, // selectable
@@ -492,7 +493,7 @@
             presetsMenu = buildPresetsMenu(classname, options, usePreset);
             calendar = buildCalendar(classname, options, {
                 onApply: function () {
-                    console.log("teste");
+                    isOpen = true;
                     close();
                     setRange();
                 }
@@ -727,6 +728,7 @@
         }
 
         function open() {
+            //calendar.reset();
             if (!isOpen) {
                 triggerButton.getElement().addClass(classname + '-active');
                 $mask.show();
@@ -791,6 +793,13 @@
     }
 
     function htmlConstruct() {
+
+        var todayDate = new Date();
+        var dd = todayDate.getDate();
+        var mm = todayDate.getMonth() + 1;
+        var yyyy = todayDate.getFullYear();
+        var tableMonth = ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUN', 'JUI', 'AOU', 'SEP', 'OCT', 'NOV', 'DEC'];
+
         var header = '<header class="mdtp-header">' +
             '<div class="mdtp-actual-day">Wednesday</div>' +
             '<div class="mdtp-close"><a><i class="material-icons">clear</i><!--</div--></a></div>' +
@@ -798,12 +807,12 @@
         var dateBloc = '<div class="mdtp-date">' +
             '<div>' +
             '<div class="left center p10"></div>' +
-            '<div class="mdtp-actual-month p80"><span class="first_month">SEP</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_month">SEP</span></div>' +
+            '<div class="mdtp-actual-month p80"><span class="first_month">' + tableMonth[parseInt(mm) - 1] + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_month">' + tableMonth[parseInt(mm) - 1] + '</span></div>' +
             '<div class="right center p10"></div>' +
-            '<div class="clearfix"></div></div><div class="mdtp-actual-num"><span class="first_day">24</span>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<span class="second_day">30</span></div>' +
+            '<div class="clearfix"></div></div><div class="mdtp-actual-num"><span class="first_day">' + dd + '</span>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<span class="second_day">' + dd + '</span></div>' +
             '<div>' +
             '<div class="left center p10"></div>' +
-            '<div class="mdtp-actual-year p80"><span class="first_year">2015</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_year">2015</span></div>' +
+            '<div class="mdtp-actual-year p80"><span class="first_year">' + yyyy + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_year">' + yyyy + '</span></div>' +
             '<div class="right center p10"></div>' +
             '<div class="clearfix"></div>' +
             '</div>' +
