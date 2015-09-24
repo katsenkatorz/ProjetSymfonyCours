@@ -5417,7 +5417,7 @@
 
         /* Generate the HTML for the current state of the date picker. */
         _generateHTML: function (inst) {
-            var maxDraw, prevText, prev, nextText, next, currentText, gotoDate,
+            var maxDraw, prevText, prev, nextText, header, dateBloc, next, currentText, gotoDate,
                 controls, buttonPanel, firstDay, showWeek, dayNames, dayNamesMin,
                 monthNames, monthNamesShort, beforeShowDay, showOtherMonths,
                 selectOtherMonths, defaultDate, html, dow, row, group, col, selectedDate,
@@ -5466,9 +5466,9 @@
                 this._getFormatConfig(inst)));
 
             prev = (this._canAdjustMonth(inst, -1, drawYear, drawMonth) ?
-            "<a class='ui-datepicker-prev ui-corner-all' data-handler='prev' data-event='click'" +
+            "<a class='mdtp-select-month-before' data-handler='prev' data-event='click'" +
             " title='" + prevText + "'><i class='material-icons'>chevron_left</i></a>" :
-                (hideIfNoPrevNext ? "" : "<a class='ui-datepicker-prev ui-corner-all ui-state-disabled' title='" + prevText + "'></a>"));
+                (hideIfNoPrevNext ? "" : "<a class='mdtp-select-month-before invisible' title='" + prevText + "'><i class='material-icons'>chevron_left</i></a>"));
 
             nextText = this._get(inst, "nextText");
             nextText = (!navigationAsDateFormat ? nextText : this.formatDate(nextText,
@@ -5476,26 +5476,10 @@
                 this._getFormatConfig(inst)));
 
             next = (this._canAdjustMonth(inst, +1, drawYear, drawMonth) ?
-            "<a class='ui-datepicker-next ui-corner-all' data-handler='next' data-event='click'" +
+            "<a class='mdtp-select-month-after' data-handler='next' data-event='click'" +
             " title='" + nextText + "'><i class='material-icons'>chevron_right</i></a>" :
-                (hideIfNoPrevNext ? "" : "<a class='ui-datepicker-next ui-corner-all ui-state-disabled' title='" + nextText + "'></a>"));
+                (hideIfNoPrevNext ? "" : "<a class='mdtp-select-month-after invisible' title='" + nextText + "'><i class='material-icons'>chevron_right</i></a>"));
 
-            header = '<header class="mdtp-header">' +
-            '<div class="mdtp-actual-day">Wednesday</div>' +
-            '<div class="mdtp-close"><a><i class="material-icons">clear</i><!--</div--></a></div>' +
-            '</header>';
-            dateBloc = '<div class="mdtp-date">' +
-            '<div>' +
-            '<div class="left center p10"><a href="javascript:void(0);" class="mdtp-select-month-before invisible"><i class="material-icons">chevron_left</i></a></div>' +
-            '<div class="mdtp-actual-month p80">SEP</div>' +
-            '<div class="right center p10"><a data-handler="next" data-event="click" title="Suivant" class="mdtp-select-month-after"><i class="material-icons">chevron_right</i></a></div>' +
-            '<div class="clearfix"></div></div><div class="mdtp-actual-num">30</div>' +
-            '<div>' +
-            '<div class="left center p10"><a href="javascript:void(0);" class="mdtp-select-year-before invisible"><i class="material-icons">chevron_left</i></a></div>' +
-            '<div class="mdtp-actual-year p80">2015</div><div class="right center p10"><a href="javascript:void(0);" class="mdtp-select-year-after"><i class="material-icons">chevron_right</i></a></div>' +
-            '<div class="clearfix"></div>' +
-            '</div>' +
-            '</div>';
 
             currentText = this._get(inst, "currentText");
             gotoDate = (this._get(inst, "gotoCurrent") && inst.currentDay ? currentDate : today);
@@ -5522,6 +5506,9 @@
             selectOtherMonths = this._get(inst, "selectOtherMonths");
             defaultDate = this._getDefaultDate(inst);
             html = "";
+            console.log('here');
+            html += prev;
+            html += next;
             dow;
             for (row = 0; row < numMonths[0]; row++) {
                 group = "";
@@ -5551,8 +5538,8 @@
                         calender += "'>";
                     }
                     calender += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + cornerClass + "'>" +
-                    (/all|left/.test(cornerClass) && row === 0 ? (isRTL ? next : prev) : "") +
-                    (/all|right/.test(cornerClass) && row === 0 ? (isRTL ? prev : next) : "") +
+                    (/all|left/.test(cornerClass) && row === 0 ? (isRTL ? "" : "") : "") +
+                    (/all|right/.test(cornerClass) && row === 0 ? (isRTL ? "" : "") : "") +
                     this._generateMonthYearHeader(inst, drawMonth, drawYear, minDate, maxDate,
                         row > 0 || col > 0, monthNames, monthNamesShort) + // draw month headers
                     "</div><table class='ui-datepicker-calendar'><thead>" +

@@ -293,7 +293,22 @@
 
         function beforeShowDay(date) {
 
-            var hasRange = range.start && ((+date === +range.start) && (range.end && range.start <= date && date <= range.end)) ? true : false;
+            function hasRange() {
+                if (range.start && range.end) {
+                    if (range.start <= range.end) {
+                        return true
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                else {
+                    return false;
+                }
+            }
+
+            var hasRange = hasRange();
+
             var result = [
                     true, // selectable
                     range.start && ((+date === +range.start) || (range.end && range.start <= date && date <= range.end)) ? 'ui-state-highlight' : '' // class to be added
@@ -303,6 +318,7 @@
                 userResult = options.datepickerOptions.beforeShowDay(date);
             }
             if (hasRange) {
+                console.log("HASRANGE");
                 applyButton = true;
                 bindEvents();
             }
@@ -476,7 +492,7 @@
             presetsMenu = buildPresetsMenu(classname, options, usePreset);
             calendar = buildCalendar(classname, options, {
                 onApply: function () {
-                    isOpen = true;
+                    console.log("teste");
                     close();
                     setRange();
                 }
@@ -503,7 +519,7 @@
             autoFit();
             reset();
             bindEvents();
-            buildHeader();
+            htmlConstruct();
         }
 
         function render() {
@@ -774,29 +790,29 @@
         };
     }
 
-    /*<a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Suivant"><i class="material-icons">chevron_right</i></a>*/
-    function buildHeader() {
-        console.log('sdfsdf');
-        var header = $('<header class="mdtp-header">' +
-        '<div class="mdtp-actual-day">Wednesday</div>' +
-        '<div class="mdtp-close"><a><i class="material-icons">clear</i><!--</div--></a></div>' +
-        '</header>');
-        var dateBloc = $('<div class="mdtp-date">' +
-        '<div>' +
-        '<div class="left center p10"><a href="javascript:void(0);" class="mdtp-select-month-before invisible"><i class="material-icons">chevron_left</i></a></div>' +
-        '<div class="mdtp-actual-month p80">SEP</div>' +
-        '<div class="right center p10"><a data-handler="next" data-event="click" title="Suivant" class="mdtp-select-month-after"><i class="material-icons">chevron_right</i></a></div>' +
-        '<div class="clearfix"></div></div><div class="mdtp-actual-num">30</div>' +
-        '<div>' +
-        '<div class="left center p10"><a href="javascript:void(0);" class="mdtp-select-year-before invisible"><i class="material-icons">chevron_left</i></a></div>' +
-        '<div class="mdtp-actual-year p80">2015</div><div class="right center p10"><a href="javascript:void(0);" class="mdtp-select-year-after"><i class="material-icons">chevron_right</i></a></div>' +
-        '<div class="clearfix"></div>' +
-        '</div>' +
-        '</div>');
+    function htmlConstruct() {
+        var header = '<header class="mdtp-header">' +
+            '<div class="mdtp-actual-day">Wednesday</div>' +
+            '<div class="mdtp-close"><a><i class="material-icons">clear</i><!--</div--></a></div>' +
+            '</header>';
+        var dateBloc = '<div class="mdtp-date">' +
+            '<div>' +
+            '<div class="left center p10"></div>' +
+            '<div class="mdtp-actual-month p80"><span class="first_month">SEP</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_month">SEP</span></div>' +
+            '<div class="right center p10"></div>' +
+            '<div class="clearfix"></div></div><div class="mdtp-actual-num"><span class="first_day">24</span>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<span class="second_day">30</span></div>' +
+            '<div>' +
+            '<div class="left center p10"></div>' +
+            '<div class="mdtp-actual-year p80"><span class="first_year">2015</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_year">2015</span></div>' +
+            '<div class="right center p10"></div>' +
+            '<div class="clearfix"></div>' +
+            '</div>' +
+            '</div>';
 
-        dateBloc.prependTo($('div.mdtp-main.ui-widget-content'));
-        header.prependTo($('div.mdtp-main.ui-widget-content'));
 
+        $(dateBloc).prependTo($('div.mdtp-main.ui-widget-content'));
+        $(header).prependTo($('div.mdtp-main.ui-widget-content'));
     }
 
-})(jQuery, window);
+})
+(jQuery, window);

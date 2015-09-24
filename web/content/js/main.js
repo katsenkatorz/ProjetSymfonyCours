@@ -1,5 +1,11 @@
 $(function () {
 
+    var first_year = '.first_year';
+    var second_year = '.second_year';
+    var first_month = '.first_month';
+    var second_month = '.second_month';
+    var first_day = '.first_day';
+    var second_day = '.second_day';
 
     function convertDate(date) {
         var dd = date.getDate();
@@ -55,6 +61,21 @@ $(function () {
                     return [false, "disabled"];
                 }
             }, onSelect: function (selectedDate) {
+                var date = selectedDate.match(/\d+/g);
+                var tableMonth = ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUN', 'JUI', 'AOU', 'SEP', 'OCT', 'NOV', 'DEC'];
+                var monthNb = parseInt(date[1]) - 1;
+
+                if ($(first_day).hasClass("fill")) {
+                    $(second_day).html(date[0]);
+                    $(second_month).html(tableMonth[monthNb]);
+                    $(second_year).html(date[2]);
+                    $(first_day).removeClass("fill");
+                } else {
+                    $(first_day).html(date[0]).addClass("fill");
+                    $(first_month).html(tableMonth[monthNb]).addClass("fill");
+                    $(first_year).html(date[2]).addClass("fill");
+                }
+
                 console.log(selectedDate);
                 //test(selectedDate);
             }
