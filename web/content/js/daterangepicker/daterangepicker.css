@@ -1,0 +1,83 @@
+/*!
+ * Copyright (c) 2014 Tamble, Inc.
+ * Licensed under MIT (https://github.com/tamble/jquery-ui-daterangepicker/raw/master/LICENSE.txt)
+ */
+
+.mdtp-triggerbutton.ui-button {
+	text-align: left;
+	min-width: 18em;
+}
+.mdtp {
+	background: #fff;
+	max-width: 300px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	position: relative;
+	left: 50%;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.mdtp-mask {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	/* required for IE */
+	background-color: #fff;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.mdtp-presets, .mdtp-calendar {
+	display: table-cell;
+	vertical-align: top;
+	height: 230px;
+}
+.mdtp-right .mdtp-presets {
+	padding: 2px 7px 7px 2px;
+}
+.mdtp-left .mdtp-presets {
+	padding: 2px 2px 7px 7px;
+}
+.ui-menu {
+	white-space: nowrap;
+}
+.mdtp .ui-widget-content, .mdtp .ui-datepicker .ui-state-highlight {
+	border-width: 0;
+}
+.mdtp > .mdtp-main.ui-widget-content {
+	border-bottom-width: 1px;
+}
+.mdtp .ui-datepicker .ui-datepicker-today .ui-state-highlight {
+	border-width: 1px;
+}
+.mdtp-right .mdtp-calendar {
+	border-left-width: 1px;
+	padding-left: 5px;
+}
+.mdtp-left .mdtp-calendar {
+	border-right-width: 1px;
+	padding-right: 5px;
+}
+.mdtp-right .mdtp-buttonpanel {
+	float: left;
+}
+.mdtp-left .mdtp-buttonpanel {
+	float: right;
+}
+.mdtp-buttonpanel > button {
+	margin-top: 6px;
+}
+.mdtp-right .mdtp-buttonpanel > button {
+	margin-right: 6px;
+}
+.mdtp-left .mdtp-buttonpanel > button {
+	margin-left: 6px;
+}
+
+/* themeable styles */
+
+.mdtp-calendar .ui-state-highlight a.ui-state-default {
+	background: #b0c4de;
+	color: #fff;
+}
