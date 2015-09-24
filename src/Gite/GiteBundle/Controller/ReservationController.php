@@ -98,11 +98,15 @@ class ReservationController extends Controller
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->findOneById($giteId);
 
-        $arrival = substr($data['date'], 0, -13);
-        $departure = substr($data['date'], -10, 10);
+        // $arrival = substr($data['date'], 0, -13);
+        // $departure = substr($data['date'], -10, 10);
 
-        $entity->setArrival(new \DateTime(str_replace('/','-',$arrival)));
-        $entity->setDeparture(new \DateTime(str_replace('/','-',$departure)));
+        // $entity->setArrival(new \DateTime(str_replace('/','-',$arrival)));
+        // $entity->setDeparture(new \DateTime(str_replace('/','-',$departure)));
+
+        $entity->setArrival($data['arrival']);
+        $entity->setDeparture($data['departure']);
+
         $entity->setGite($gite);
 
         $form = $this->createCreateForm($entity);
@@ -252,9 +256,9 @@ class ReservationController extends Controller
     {
         return $this->createFormBuilder($defaultData)
             ->setAction($this->generateUrl('reservation_new'))
-            ->add('date', 'text')
-            // ->add('arrival', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
-            // ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
+            // ->add('date', 'text')
+            ->add('arrival', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
+            ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
             ->add('idGite', 'hidden',array(
                 'data' => $idGite
             ))

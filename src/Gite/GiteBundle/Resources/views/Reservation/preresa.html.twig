@@ -3,14 +3,24 @@
 {{ form_start(pre_resa, {'attr': {'class': 'cell cell--12-col'}}) }}
 {{ form_errors(pre_resa) }}
 
-<div class="textfield js-textfield cell--12-col textfield--floating-label">
-	{{ form_widget(pre_resa.date, {
+<div class="textfield js-textfield cell--6-col textfield--floating-label">
+	{{ form_widget(pre_resa.arrival, {
             'attr': {
                 'class': 'textfield__input date',
                 'data-date-format':'dd/mm/yyyy'
             }
         }) }}
-	{{ form_label(pre_resa.date, 'Arrivée - Départ', {'label_attr': {'class': 'textfield__label'}}) }}
+	{{ form_label(pre_resa.arrival, 'Arrivée', {'label_attr': {'class': 'textfield__label'}}) }}
+</div>
+
+<div class="textfield js-textfield cell--6-col textfield--floating-label">
+	{{ form_widget(pre_resa.departure, {
+            'attr': {
+                'class': 'textfield__input date',
+                'data-date-format':'dd/mm/yyyy'
+            }
+        }) }}
+	{{ form_label(pre_resa.departure, 'Départ', {'label_attr': {'class': 'textfield__label'}}) }}
 </div>
 
 {{ form_end(pre_resa) }}
