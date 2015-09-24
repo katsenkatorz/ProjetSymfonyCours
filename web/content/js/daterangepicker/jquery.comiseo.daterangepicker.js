@@ -503,6 +503,7 @@
             autoFit();
             reset();
             bindEvents();
+            buildHeader();
         }
 
         function render() {

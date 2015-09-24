@@ -1,341 +1,137 @@
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../fonts/MaterialIcons-Regular.woff2") format("woff2"); }
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  word-wrap: normal;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased; }
+@font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: local("Material Icons"), local("MaterialIcons-Regular"), url("../fonts/MaterialIcons-Regular.woff2") format("woff2"); }
+.material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; word-wrap: normal; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; }
 
-.cb-slideshow {
-  background: #000;
-  height: 300px;
-  overflow: hidden; }
+.cb-slideshow { background: #000; height: 300px; overflow: hidden; }
 
-.cb-slideshow,
-.cb-slideshow:after {
-  position: relative;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1; }
+.cb-slideshow, .cb-slideshow:after { position: relative; width: 100%; top: 0; left: 0; z-index: -1; }
 
-.cb-slideshow:after {
-  content: '';
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  background: transparent url("../../media/pattern.png") repeat top left; }
+.cb-slideshow:after { content: ''; height: 100%; position: absolute; z-index: 1; background: transparent url("../../media/pattern.png") repeat top left; }
 
-.cb-slideshow li img {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: none;
-  opacity: 0;
-  z-index: 0;
-  -webkit-backface-visibility: hidden;
-  -webkit-animation: imageAnimation 36s linear infinite 0s;
-  -moz-animation: imageAnimation 36s linear infinite 0s;
-  -o-animation: imageAnimation 36s linear infinite 0s;
-  -ms-animation: imageAnimation 36s linear infinite 0s;
-  animation: imageAnimation 36s linear infinite 0s; }
+.cb-slideshow li img { width: 100%; height: auto; position: absolute; top: 0; left: 0; background-size: cover; background-position: 50% 50%; background-repeat: none; opacity: 0; z-index: 0; -webkit-backface-visibility: hidden; -webkit-animation: imageAnimation 36s linear infinite 0s; -moz-animation: imageAnimation 36s linear infinite 0s; -o-animation: imageAnimation 36s linear infinite 0s; -ms-animation: imageAnimation 36s linear infinite 0s; animation: imageAnimation 36s linear infinite 0s; }
 
-.cb-slideshow li:nth-child(2) img {
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-  animation-delay: 6s; }
+.cb-slideshow li:nth-child(2) img { -webkit-animation-delay: 6s; -moz-animation-delay: 6s; -o-animation-delay: 6s; -ms-animation-delay: 6s; animation-delay: 6s; }
 
-.cb-slideshow li:nth-child(3) img {
-  -webkit-animation-delay: 12s;
-  -moz-animation-delay: 12s;
-  -o-animation-delay: 12s;
-  -ms-animation-delay: 12s;
-  animation-delay: 12s; }
+.cb-slideshow li:nth-child(3) img { -webkit-animation-delay: 12s; -moz-animation-delay: 12s; -o-animation-delay: 12s; -ms-animation-delay: 12s; animation-delay: 12s; }
 
-.cb-slideshow li:nth-child(4) img {
-  -webkit-animation-delay: 18s;
-  -moz-animation-delay: 18s;
-  -o-animation-delay: 18s;
-  -ms-animation-delay: 18s;
-  animation-delay: 18s; }
+.cb-slideshow li:nth-child(4) img { -webkit-animation-delay: 18s; -moz-animation-delay: 18s; -o-animation-delay: 18s; -ms-animation-delay: 18s; animation-delay: 18s; }
 
-.cb-slideshow li:nth-child(5) img {
-  -webkit-animation-delay: 24s;
-  -moz-animation-delay: 24s;
-  -o-animation-delay: 24s;
-  -ms-animation-delay: 24s;
-  animation-delay: 24s; }
+.cb-slideshow li:nth-child(5) img { -webkit-animation-delay: 24s; -moz-animation-delay: 24s; -o-animation-delay: 24s; -ms-animation-delay: 24s; animation-delay: 24s; }
 
-.cb-slideshow li:nth-child(6) img {
-  -webkit-animation-delay: 30s;
-  -moz-animation-delay: 30s;
-  -o-animation-delay: 30s;
-  -ms-animation-delay: 30s;
-  animation-delay: 30s; }
+.cb-slideshow li:nth-child(6) img { -webkit-animation-delay: 30s; -moz-animation-delay: 30s; -o-animation-delay: 30s; -ms-animation-delay: 30s; animation-delay: 30s; }
 
-.cb-slideshow li:nth-child(2) div {
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-  animation-delay: 6s; }
+.cb-slideshow li:nth-child(2) div { -webkit-animation-delay: 6s; -moz-animation-delay: 6s; -o-animation-delay: 6s; -ms-animation-delay: 6s; animation-delay: 6s; }
 
-.cb-slideshow li:nth-child(3) div {
-  -webkit-animation-delay: 12s;
-  -moz-animation-delay: 12s;
-  -o-animation-delay: 12s;
-  -ms-animation-delay: 12s;
-  animation-delay: 12s; }
+.cb-slideshow li:nth-child(3) div { -webkit-animation-delay: 12s; -moz-animation-delay: 12s; -o-animation-delay: 12s; -ms-animation-delay: 12s; animation-delay: 12s; }
 
-.cb-slideshow li:nth-child(4) div {
-  -webkit-animation-delay: 18s;
-  -moz-animation-delay: 18s;
-  -o-animation-delay: 18s;
-  -ms-animation-delay: 18s;
-  animation-delay: 18s; }
+.cb-slideshow li:nth-child(4) div { -webkit-animation-delay: 18s; -moz-animation-delay: 18s; -o-animation-delay: 18s; -ms-animation-delay: 18s; animation-delay: 18s; }
 
-.cb-slideshow li:nth-child(5) div {
-  -webkit-animation-delay: 24s;
-  -moz-animation-delay: 24s;
-  -o-animation-delay: 24s;
-  -ms-animation-delay: 24s;
-  animation-delay: 24s; }
+.cb-slideshow li:nth-child(5) div { -webkit-animation-delay: 24s; -moz-animation-delay: 24s; -o-animation-delay: 24s; -ms-animation-delay: 24s; animation-delay: 24s; }
 
-.cb-slideshow li:nth-child(6) div {
-  -webkit-animation-delay: 30s;
-  -moz-animation-delay: 30s;
-  -o-animation-delay: 30s;
-  -ms-animation-delay: 30s;
-  animation-delay: 30s; }
+.cb-slideshow li:nth-child(6) div { -webkit-animation-delay: 30s; -moz-animation-delay: 30s; -o-animation-delay: 30s; -ms-animation-delay: 30s; animation-delay: 30s; }
 
-@-webkit-keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1.05);
-    -webkit-animation-timing-function: ease-in; }
-  10% {
-    opacity: 1;
-    -webkit-transform: scale(1.1); }
-  20% {
-    opacity: 1;
-    -webkit-transform: scale(1.15); }
-  30% {
-    opacity: 0;
-    -webkit-transform: scale(1.2); }
-  50% {
-    opacity: 0;
-    -webkit-transform: scale(1.2); }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(1.2); } }
-@-moz-keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    -moz-transform: scale(1.05);
-    -moz-animation-timing-function: ease-in; }
-  10% {
-    opacity: 1;
-    -moz-transform: scale(1.1); }
-  20% {
-    opacity: 1;
-    -moz-transform: scale(1.15); }
-  30% {
-    opacity: 0;
-    -moz-transform: scale(1.2); }
-  50% {
-    opacity: 0;
-    -moz-transform: scale(1.2); }
-  100% {
-    opacity: 0;
-    -moz-transform: scale(1.2); } }
-@-o-keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    -o-transform: scale(1.05);
-    -o-animation-timing-function: ease-in; }
-  10% {
-    opacity: 1;
-    -o-transform: scale(1.1); }
-  20% {
-    opacity: 1;
-    -o-transform: scale(1.15); }
-  30% {
-    opacity: 0;
-    -o-transform: scale(1.2); }
-  50% {
-    opacity: 0;
-    -o-transform: scale(1.2); }
-  100% {
-    opacity: 0;
-    -o-transform: scale(1.2); } }
-@-ms-keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    -ms-transform: scale(1.05);
-    -ms-animation-timing-function: ease-in; }
-  10% {
-    opacity: 1;
-    -ms-transform: scale(1.1); }
-  20% {
-    opacity: 1;
-    -ms-transform: scale(1.15); }
-  30% {
-    opacity: 0;
-    -ms-transform: scale(1.2); }
-  50% {
-    opacity: 0;
-    -ms-transform: scale(1.2); }
-  100% {
-    opacity: 0;
-    -ms-transform: scale(1.2); } }
-@keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    transform: scale(1.05);
-    animation-timing-function: ease-in; }
-  10% {
-    opacity: 1;
-    transform: scale(1.1); }
-  20% {
-    opacity: 1;
-    transform: scale(1.15); }
-  30% {
-    opacity: 0;
-    -webkit-transform: scale(1.2); }
-  50% {
-    opacity: 0;
-    -webkit-transform: scale(1.2); }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(1.2); } }
+@-webkit-keyframes imageAnimation { 0% { opacity: 0; -webkit-transform: scale(1.05); -webkit-animation-timing-function: ease-in; }
+  10% { opacity: 1; -webkit-transform: scale(1.1); }
+  20% { opacity: 1; -webkit-transform: scale(1.15); }
+  30% { opacity: 0; -webkit-transform: scale(1.2); }
+  50% { opacity: 0; -webkit-transform: scale(1.2); }
+  100% { opacity: 0; -webkit-transform: scale(1.2); } }
+@-moz-keyframes imageAnimation { 0% { opacity: 0; -moz-transform: scale(1.05); -moz-animation-timing-function: ease-in; }
+  10% { opacity: 1; -moz-transform: scale(1.1); }
+  20% { opacity: 1; -moz-transform: scale(1.15); }
+  30% { opacity: 0; -moz-transform: scale(1.2); }
+  50% { opacity: 0; -moz-transform: scale(1.2); }
+  100% { opacity: 0; -moz-transform: scale(1.2); } }
+@-o-keyframes imageAnimation { 0% { opacity: 0; -o-transform: scale(1.05); -o-animation-timing-function: ease-in; }
+  10% { opacity: 1; -o-transform: scale(1.1); }
+  20% { opacity: 1; -o-transform: scale(1.15); }
+  30% { opacity: 0; -o-transform: scale(1.2); }
+  50% { opacity: 0; -o-transform: scale(1.2); }
+  100% { opacity: 0; -o-transform: scale(1.2); } }
+@-ms-keyframes imageAnimation { 0% { opacity: 0; -ms-transform: scale(1.05); -ms-animation-timing-function: ease-in; }
+  10% { opacity: 1; -ms-transform: scale(1.1); }
+  20% { opacity: 1; -ms-transform: scale(1.15); }
+  30% { opacity: 0; -ms-transform: scale(1.2); }
+  50% { opacity: 0; -ms-transform: scale(1.2); }
+  100% { opacity: 0; -ms-transform: scale(1.2); } }
+@keyframes imageAnimation { 0% { opacity: 0; transform: scale(1.05); animation-timing-function: ease-in; }
+  10% { opacity: 1; transform: scale(1.1); }
+  20% { opacity: 1; transform: scale(1.15); }
+  30% { opacity: 0; -webkit-transform: scale(1.2); }
+  50% { opacity: 0; -webkit-transform: scale(1.2); }
+  100% { opacity: 0; -webkit-transform: scale(1.2); } }
 /* Show at least something when animations not supported */
-.no-cssanimations .cb-slideshow li img {
-  opacity: 1; }
+.no-cssanimations .cb-slideshow li img { opacity: 1; }
 
-ul.cb-slideshow.cell.cell--12-col {
-  margin: 0;
-  padding: 0; }
+ul.cb-slideshow.cell.cell--12-col { margin: 0; padding: 0; }
 
-.grid {
-  margin: -8px; }
+.grid { margin: -8px; }
 
-.t_center {
-  text-align: center; }
+.t_center { text-align: center; }
 
-.t_left {
-  text-align: left; }
+.t_left { text-align: left; }
 
-.t_right {
-  text-align: right; }
+.t_right { text-align: right; }
 
-.daterangepicker.dropdown-menu.show-calendar.opensright {
-  display: none; }
+.daterangepicker.dropdown-menu.show-calendar.opensright { display: none; }
 
-.mdtp {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 2000; }
+.mdtp { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 2000; }
 
-.mdtp > .mdtp-main {
-  background: #fff;
-  max-width: 300px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  position: relative;
-  left: 50%;
-  top: 158px;
-  margin-left: -150px; }
+.mdtp > .mdtp-main { background: #fff; max-width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); position: relative; left: 50%; top: 158px; margin-left: -150px; }
 
-.mdtp > .mdtp-main > .mdtp-date-view > header.mdtp-header {
-  background: #007d72;
-  color: #fff;
-  text-align: center;
-  padding: 0.3rem; }
+.mdtp > .mdtp-main > header.mdtp-header { background: #007d72; color: #fff; text-align: center; padding: 0.3rem; }
 
-.mdtp table.mdtp-picker-days tr > td > a.selected,
-a.ui-state-default.ui-state-active {
-  background: #009688;
-  color: #fff;
-  font-weight: 500; }
+/* MARVIN */
+.mdtp > .mdtp-main > div.mdtp-date { background: #009688; text-align: center; color: #fff; padding: 10px; }
 
-.button.js-button {
-  color: #00a698; }
+.mdtp > .mdtp-main > div.mdtp-date > div { padding: 0; margin: 0; }
 
-td.ui-datepicker-unselectable.ui-state-disabled.disabled span,
-td.ui-datepicker-unselectable.ui-state-disabled.reserved span {
-  color: #bbb;
-  font-weight: 500; }
+.mdtp table.mdtp-picker-days tr > td > a.selected, a.ui-state-default.ui-state-active { background: #009688; color: #fff; font-weight: 500; }
 
-.ui-datepicker-prev i, .ui-datepicker-next i {
-  color: #009688;
-  cursor: pointer; }
+.mdtp .center { text-align: center; }
 
-.ui-datepicker table {
-  border: none;
-  margin: 0;
-  width: 100%; }
+.mdtp .left { float: left; }
 
-.ui-datepicker {
-  width: 100%;
-  padding: 0; }
+.mdtp .right { float: right; }
 
-.ui-datepicker td span, .ui-datepicker td a {
-  color: #212121;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.5rem 0.5rem;
-  border-radius: 50% !important;
-  text-align: center;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  line-height: 15px; }
+.mdtp .p10 { width: 10%; display: inline-block; }
 
-.ui-datepicker th {
-  color: #757575;
-  text-align: center;
-  font-weight: 700;
-  padding: 0.4rem 0.3rem; }
+.mdtp div.mdtp-actual-month { font-size: 1.5em; }
 
-.ui-datepicker td {
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 1rem 0.3rem; }
+.mdtp .p80 { width: 80%; display: inline-block; }
 
-.ui-state-highlight {
-  background: #ddd; }
+.mdtp div.mdtp-actual-num { font-size: 3em; line-height: 0.9; }
 
-.ui-state-hover {
-  margin: 0;
-  padding: 0; }
+.mdtp div.mdtp-actual-year { font-size: 1.5em; color: #DCEDC8; }
 
-.ui-icon {
-  text-indent: inherit;
-  overflow: visible; }
+.mdtp .mdtp-close { position: absolute; top: 0.5em; right: 1rem; }
 
-.ui-datepicker .ui-datepicker-next {
-  right: 10px; }
+.mdtp .mdtp-close > a > i { font-size: 1em; }
 
-.ui-datepicker .ui-datepicker-prev {
-  left: 10px; }
+/* FIN MARVIN */
+.button.js-button { color: #00a698; }
+
+td.ui-datepicker-unselectable.ui-state-disabled.disabled span, td.ui-datepicker-unselectable.ui-state-disabled.reserved span { color: #bbb; font-weight: 500; }
+
+.ui-datepicker-prev i, .ui-datepicker-next i { color: #009688; cursor: pointer; }
+
+.ui-datepicker table { border: none; margin: 0; width: 100%; }
+
+.ui-datepicker { width: 100%; padding: 0; }
+
+.ui-datepicker td span, .ui-datepicker td a { color: #212121; font-weight: 600; text-decoration: none; padding: 0.5rem 0.5rem; border-radius: 50% !important; text-align: center; display: inline-block; width: 15px; height: 15px; line-height: 15px; }
+
+.ui-datepicker th { color: #757575; text-align: center; font-weight: 700; padding: 0.4rem 0.3rem; }
+
+.ui-datepicker td { font-size: 0.9rem; text-align: center; padding: 1rem 0.3rem; }
+
+.ui-state-highlight { background: #ddd; }
+
+.ui-state-hover { margin: 0; padding: 0; }
+
+.ui-icon { text-indent: inherit; overflow: visible; }
+
+.ui-datepicker .ui-datepicker-next { right: 10px; }
+
+.ui-datepicker .ui-datepicker-prev { left: 10px; }
 
 /*# sourceMappingURL=app.css.map */

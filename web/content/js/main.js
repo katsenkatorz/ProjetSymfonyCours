@@ -39,7 +39,7 @@ $(function () {
             dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
             weekHeader: 'Sem.',
             dateFormat: 'dd-mm-yy',
-            numberOfMonths: 2,
+            numberOfMonths: 1,
             minDate: todayDate,
             maxDate: null,
             beforeShowDay: function (date) {
@@ -56,13 +56,13 @@ $(function () {
                 }
             }, onSelect: function (selectedDate) {
                 console.log(selectedDate);
-                test(selectedDate);
+                //test(selectedDate);
             }
             //console.log(dateStr);
 
         },
         onChange: function () {
-            var test = $(".textfield__input.date").daterangepicker("getHightlightedElements");
+            //var test = $(".textfield__input.date").daterangepicker("getHightlightedElements");
             var range = $(".textfield__input.date").daterangepicker("getRange");
             var startDate = range.start;
             var endDate = range.end;
