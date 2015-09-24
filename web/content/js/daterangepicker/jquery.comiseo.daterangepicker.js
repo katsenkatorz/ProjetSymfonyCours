@@ -774,4 +774,29 @@
         };
     }
 
+    /*<a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Suivant"><i class="material-icons">chevron_right</i></a>*/
+    function buildHeader() {
+        console.log('sdfsdf');
+        var header = $('<header class="mdtp-header">' +
+        '<div class="mdtp-actual-day">Wednesday</div>' +
+        '<div class="mdtp-close"><a><i class="material-icons">clear</i><!--</div--></a></div>' +
+        '</header>');
+        var dateBloc = $('<div class="mdtp-date">' +
+        '<div>' +
+        '<div class="left center p10"><a href="javascript:void(0);" class="mdtp-select-month-before invisible"><i class="material-icons">chevron_left</i></a></div>' +
+        '<div class="mdtp-actual-month p80">SEP</div>' +
+        '<div class="right center p10"><a data-handler="next" data-event="click" title="Suivant" class="mdtp-select-month-after"><i class="material-icons">chevron_right</i></a></div>' +
+        '<div class="clearfix"></div></div><div class="mdtp-actual-num">30</div>' +
+        '<div>' +
+        '<div class="left center p10"><a href="javascript:void(0);" class="mdtp-select-year-before invisible"><i class="material-icons">chevron_left</i></a></div>' +
+        '<div class="mdtp-actual-year p80">2015</div><div class="right center p10"><a href="javascript:void(0);" class="mdtp-select-year-after"><i class="material-icons">chevron_right</i></a></div>' +
+        '<div class="clearfix"></div>' +
+        '</div>' +
+        '</div>');
+
+        dateBloc.prependTo($('div.mdtp-main.ui-widget-content'));
+        header.prependTo($('div.mdtp-main.ui-widget-content'));
+
+    }
+
 })(jQuery, window);
