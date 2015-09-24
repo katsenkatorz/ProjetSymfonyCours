@@ -88,7 +88,7 @@ class ReservationController extends Controller
 
         if ($formPreResa->isValid()) {
             $data = $formPreResa->getData();
-        }else{
+        } else {
             return "Le format de date n'est pas correct.";
         }
         $entity = new Reservation();
@@ -98,14 +98,13 @@ class ReservationController extends Controller
         $em = $this->getDoctrine()->getManager();
         $gite = $em->getRepository('GiteBundle:Gite')->findOneById($giteId);
 
-        // $arrival = substr($data['date'], 0, -13);
-        // $departure = substr($data['date'], -10, 10);
+        $date = json_decode($data["date"], true);
 
-        // $entity->setArrival(new \DateTime(str_replace('/','-',$arrival)));
-        // $entity->setDeparture(new \DateTime(str_replace('/','-',$departure)));
+        $entity->setArrival(new \DateTime($date["start"]));
+        $entity->setDeparture(new \DateTime($date["end"]));
 
-        $entity->setArrival($data['arrival']);
-        $entity->setDeparture($data['departure']);
+//        $entity->setArrival($data['arrival']);
+//        $entity->setDeparture($data['departure']);
 
         $entity->setGite($gite);
 
@@ -252,14 +251,14 @@ class ReservationController extends Controller
         ));
     }
 
-    private function formPreResa($defaultData, $idGite=null)
+    private function formPreResa($defaultData, $idGite = null)
     {
         return $this->createFormBuilder($defaultData)
             ->setAction($this->generateUrl('reservation_new'))
-            // ->add('date', 'text')
-            ->add('arrival', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
-            ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
-            ->add('idGite', 'hidden',array(
+            ->add('date', 'text')
+//            ->add('arrival', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
+//            ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
+            ->add('idGite', 'hidden', array(
                 'data' => $idGite
             ))
             ->add('Reserver', 'submit')
