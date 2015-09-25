@@ -106,8 +106,6 @@ ul.cb-slideshow.cell.cell--12-col { margin: 0; padding: 0; }
 
 .mdtp .mdtp-close > a > i { font-size: 1em; }
 
-.button.js-button { color: #00a698; }
-
 td.ui-datepicker-unselectable.ui-state-disabled.disabled span, td.ui-datepicker-unselectable.ui-state-disabled.reserved span { color: #bbb; font-weight: 500; }
 
 .ui-datepicker-prev i, .ui-datepicker-next i { color: #009688; cursor: pointer; }

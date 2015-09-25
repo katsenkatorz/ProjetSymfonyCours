@@ -561,10 +561,10 @@
             var yyyy = todayDate.getFullYear();
             var tableMonth = ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUN', 'JUI', 'AOU', 'SEP', 'OCT', 'NOV', 'DEC'];
 
-            var header = $('<header class="mdtp-header">' +
+            var header = $('<header class="mdtp-header color--teal-700">' +
                 '<div class="mdtp-actual-day">Wednesday</div>' +
                 '</header>');
-            var dateBloc = '<div class="mdtp-date">' +
+            var dateBloc = '<div class="mdtp-date color--teal-500">' +
                 '<div>' +
                 '<div class="left center p10"></div>' +
                 '<div class="mdtp-actual-month p80"><span class="first_month">' + tableMonth[parseInt(mm) - 1] + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_month">' + tableMonth[parseInt(mm) - 1] + '</span></div>' +
