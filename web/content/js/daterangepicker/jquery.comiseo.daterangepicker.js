@@ -260,7 +260,7 @@
 
             applyButton = false;
             updateAtMidnight();
-            bindEvents();
+            //bindEvents();
         }
 
         function enforceOptions() {
@@ -292,23 +292,7 @@
         // called for each day in the datepicker before it is displayed
 
         function beforeShowDay(date) {
-            var hasRange = false;
 
-            function hasRangeFn() {
-                if ((range.start && range.end)) {
-                    if (range.start <= range.end) {
-                        return true
-                    }
-                    else {
-                        return false;
-                    }
-                }
-                else {
-                    return false;
-                }
-            }
-
-            hasRange = hasRangeFn();
 
             var result = [
                     true, // selectable
@@ -318,24 +302,41 @@
             if (options.datepickerOptions.hasOwnProperty('beforeShowDay')) {
                 userResult = options.datepickerOptions.beforeShowDay(date);
             }
-            if (hasRange) {
-                console.log("HASRANGE");
-                applyButton = true;
-                bindEvents();
-            }
+            //hasRange = false;
+
+            /* function hasRangeFn() {
+             if ((range.start && range.end)) {
+             if (range.start <= range.end) {
+             return true
+             }
+             else {
+             return false;
+             }
+             }
+             else {
+             return false;
+             }
+             }*/
+
+            //hasRange = hasRangeFn();
+            /* if (hasRange) {
+             console.log("HASRANGE");
+             applyButton = true;
+             bindEvents();
+             }*/
             return [
                 result[0] && userResult[0],
                 result[1] + ' ' + userResult[1]
             ];
         }
 
-        function bindEvents() {
-            if (handlers) {
-                if (applyButton) {
-                    handlers.onApply();
-                }
-            }
-        }
+        /*function bindEvents() {
+         if (handlers) {
+         if (applyButton) {
+         handlers.onApply();
+         }
+         }
+         }*/
 
         function updateAtMidnight() {
             setTimeout(function () {
@@ -491,6 +492,13 @@
         function init() {
             triggerButton = buildTriggerButton($originalElement, classname, options);
             presetsMenu = buildPresetsMenu(classname, options, usePreset);
+            /*calendar = buildCalendar(classname, options, {
+             onApply: function () {
+             isOpen = true;
+             close();
+             setRange();
+             }
+             });*/
             calendar = buildCalendar(classname, options, {
                 onApply: function () {
                     isOpen = true;
@@ -527,9 +535,9 @@
             $container = $('<div></div>', {'class': classname + ' ' + classname + '-' + sides[hSide] + ' ui-widget ui-widget-content ui-corner-all ui-front'})
                 .append($('<div></div>', {'class': classname + '-main ui-widget-content'})
                     .append(presetsMenu.getElement())
-                    .append(calendar.getElement()))
-                .append($('<div class="ui-helper-clearfix"></div>')
+                    .append(calendar.getElement())
                     .append(buttonPanel.getElement()))
+                .append($('<div class="ui-helper-clearfix"></div>'))
                 .hide();
             $originalElement.hide().after(triggerButton.getElement());
             $mask = $('<div></div>', {'class': 'ui-front ' + classname + '-mask'}).hide();
