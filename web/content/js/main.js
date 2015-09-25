@@ -6,7 +6,10 @@ $(function () {
     var second_month = '.second_month';
     var first_day = '.first_day';
     var second_day = '.second_day';
-    var dates = JSON.parse($('#form_date_resa').val());
+    var dates = '#form_date_resa';
+    if ($(dates).val()) {
+        JSON.parse($(dates).val());
+    }
     var startDate = dates.arrival;
     var endDate = dates.departure;
 
@@ -29,7 +32,7 @@ $(function () {
 
 
     var dateRange = [];
-    if (startDate.length == endDate.length) {
+    if (startDate && endDate && (startDate.length == endDate.length)) {
         for (var i = 0; i < startDate.length; i++) {
             for (var d = new Date(startDate[i]); d <= new Date(endDate[i]); d.setDate(d.getDate() + 1)) {
                 dateRange.push($.datepicker.formatDate('dd-mm-yy', d));
