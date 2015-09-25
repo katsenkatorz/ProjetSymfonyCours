@@ -8,7 +8,7 @@ $(function () {
     var second_day = '.second_day';
     var dates = '#form_date_resa';
     if ($(dates).val()) {
-        JSON.parse($(dates).val());
+        dates = JSON.parse($(dates).val());
     }
     var startDate = dates.arrival;
     var endDate = dates.departure;
