@@ -255,7 +255,6 @@ class ReservationController extends Controller
                 $date_resa_array["arrival"][$key] = $arrival;
                 $date_resa_array["departure"][$key] = $departure;
             }
-            
         }
         
         $date_resa = json_encode($date_resa_array);
