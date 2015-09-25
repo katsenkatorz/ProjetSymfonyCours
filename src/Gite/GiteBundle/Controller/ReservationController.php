@@ -243,15 +243,30 @@ class ReservationController extends Controller
     {
 
         $defaultData = array('message' => 'Type your message here');
+        $date_resa_array = array();
 
-        $form = $this->formPreResa($defaultData, $idGite);
+        $em = $this->getDoctrine()->getManager();
+        $reservations = $em->getRepository('GiteBundle:Reservation')->findAll();
+
+        foreach ($reservations as $key => $reservation ) {
+            if($reservation->getGite()){
+                $arrival = date_format($reservation->getArrival(), 'Y-m-d');
+                $departure = date_format($reservation->getDeparture(), 'Y-m-d');
+                $date_resa_array["arrival"][$key] = $arrival;
+                $date_resa_array["departure"][$key] = $departure;
+            }
+            
+        }
+        
+        $date_resa = json_encode($date_resa_array);
+        $form = $this->formPreResa($defaultData, $idGite, $date_resa);
 
         return $this->render('GiteBundle:Reservation:preresa.html.twig', array(
             'pre_resa' => $form->createView(),
         ));
     }
 
-    private function formPreResa($defaultData, $idGite = null)
+    private function formPreResa($defaultData, $idGite = null, $date_resa = null)
     {
         return $this->createFormBuilder($defaultData)
             ->setAction($this->generateUrl('reservation_new'))
@@ -260,6 +275,9 @@ class ReservationController extends Controller
 //            ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
             ->add('idGite', 'hidden', array(
                 'data' => $idGite
+            ))
+            ->add('date_resa', 'hidden', array(
+                'data' => $date_resa
             ))
             ->add('Reserver', 'submit')
             ->getForm();
