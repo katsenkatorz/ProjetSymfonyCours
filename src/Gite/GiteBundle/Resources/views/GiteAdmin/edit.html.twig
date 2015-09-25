@@ -3,33 +3,38 @@
 {% block body -%}
 <div class="grid">
   <div class="cell cell--3-col"></div>
-  <div class="cell cell--6-col">
-    <h1>Gite edit</h1>
+  <div class="cell cell--6-col cell--8-col-tablet cell--4-col-phone">
+
+    <div class="demo-card-square card shadow--2dp width-100">
+  <div class="card__title card--expand">
+    <h2 class="card__title-text">Gite edit</h2>
+  </div>
 
     {{ form_start(edit_form) }}
     <div class="card__supporting-text">
       {{ form_errors(edit_form) }}
-      <div class="textfield js-textfield textfield--floating-label wi-width-100">
+      <div class="textfield js-textfield textfield--floating-label ">
         {{ form_widget(edit_form.name, {'attr': {'class': 'textfield__input'}}) }}
         {{ form_label(edit_form.name, null, {'label_attr': {'class': 'textfield__label'}}) }}
       </div>
-      <div class="textfield js-textfield textfield--floating-label wi-width-100">
+      <div class="textfield js-textfield textfield--floating-label ">
         {{ form_widget(edit_form.content, {'attr': {'class': 'textfield__input'}}) }}
         {{ form_label(edit_form.content, null, {'label_attr': {'class': 'textfield__label'}}) }}
       </div>
-      <div class="textfield js-textfield textfield--floating-label wi-width-100">
+      <div class="textfield js-textfield textfield--floating-label ">
         {{ form_widget(edit_form.options, {'attr': {'class': 'textfield__input'}}) }}
         {{ form_label(edit_form.options, null, {'label_attr': {'class': 'textfield__label'}}) }}
       </div>
-      <div class="textfield js-textfield textfield--floating-label wi-width-100">
+      <div class="textfield js-textfield textfield--floating-label ">
         {{ form_widget(edit_form.prix, {'attr': {'class': 'textfield__input'}}) }}
         {{ form_label(edit_form.prix, null, {'label_attr': {'class': 'textfield__label'}}) }}
       </div>
-      <div class="textfield js-textfield textfield--floating-label wi-width-100">
+      <div class="textfield js-textfield textfield--floating-label ">
         {{ form_widget(edit_form.capacity, {'attr': {'class': 'textfield__input'}}) }}
         {{ form_label(edit_form.capacity, null, {'label_attr': {'class': 'textfield__label'}}) }}
       </div>
     </div>
+    <div class="card__actions card--border">
     <a class="button js-button button--raised button--colored js-ripple-effect color-text--white" href="{{ path('gite') }}">
       Back to the list
     </a>
@@ -37,6 +42,8 @@
     {{ form(delete_form, {'attr': {'class': 'button js-button button--raised button--colored js-ripple-effect color-text--white'}}) }}
 
     {{ form_end(edit_form) }}
+  </div>
+  </div>
   </div>
 </div>
 
