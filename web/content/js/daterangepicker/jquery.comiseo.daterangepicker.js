@@ -74,10 +74,10 @@
             verticalOffset: 0,
             initialText: 'Select date range...', // placeholder text - shown when nothing is selected
             icon: 'ui-icon-triangle-1-s',
-            applyButtonText: 'Apply',
+            applyButtonText: 'OK',
             clearButtonText: 'Clear',
             closeButtonText: 'Close',
-            cancelButtonText: 'Cancel',
+            cancelButtonText: 'ANNULER',
             rangeSplitter: ' - ', // string to use between dates
             dateFormat: 'dd/mm/yy', // displayed date format. Available formats: http://api.jqueryui.com/datepicker/#utility-formatDate
             altFormat: 'yy-mm-dd', // submitted date format - inside JSON {"start":"...","end":"..."}
@@ -405,13 +405,6 @@
                 .addClass(classnameContext + '-buttonpanel');
             //$self.parent().addClass('mdtp-second');
 
-            if (options.applyButtonText) {
-                applyButton = $('<button type="button" class="button js-button"></button>')
-                    .text(options.applyButtonText)
-                    .button();
-
-                $self.append(applyButton);
-            }
 
             if (options.clearButtonText) {
                 clearButton = $('<button type="button" class="button js-button"></button>')
@@ -435,6 +428,14 @@
                     .button();
 
                 $self.append(cancelButton);
+            }
+
+            if (options.applyButtonText) {
+                applyButton = $('<button type="button" class="button js-button"></button>')
+                    .text(options.applyButtonText)
+                    .button();
+
+                $self.append(applyButton);
             }
             bindEvents();
         }
@@ -560,10 +561,10 @@
             var yyyy = todayDate.getFullYear();
             var tableMonth = ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUN', 'JUI', 'AOU', 'SEP', 'OCT', 'NOV', 'DEC'];
 
-            var header = $('<header class="mdtp-header">' +
+            var header = $('<header class="mdtp-header color--teal-700">' +
                 '<div class="mdtp-actual-day">Wednesday</div>' +
                 '</header>');
-            var dateBloc = '<div class="mdtp-date">' +
+            var dateBloc = '<div class="mdtp-date color--teal-500">' +
                 '<div>' +
                 '<div class="left center p10"></div>' +
                 '<div class="mdtp-actual-month p80"><span class="first_month">' + tableMonth[parseInt(mm) - 1] + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_month">' + tableMonth[parseInt(mm) - 1] + '</span></div>' +
