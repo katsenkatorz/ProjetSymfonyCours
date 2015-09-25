@@ -6,9 +6,9 @@ $(function () {
     var second_month = '.second_month';
     var first_day = '.first_day';
     var second_day = '.second_day';
-
-    var startDate = "2015-09-26";
-    var endDate = "2015-09-28";
+    var dates = JSON.parse($('#form_date_resa').val());
+    var startDate = dates.arrival;
+    var endDate = dates.departure;
 
     function convertDate(date) {
         var dd = date.getDate();
@@ -29,8 +29,13 @@ $(function () {
 
 
     var dateRange = [];
-    for (var d = new Date(startDate); d <= new Date(endDate); d.setDate(d.getDate() + 1)) {
-        dateRange.push($.datepicker.formatDate('dd-mm-yy', d));
+    if (startDate.length == endDate.length) {
+        for (var i = 0; i < startDate.length; i++) {
+            for (var d = new Date(startDate[i]); d <= new Date(endDate[i]); d.setDate(d.getDate() + 1)) {
+                dateRange.push($.datepicker.formatDate('dd-mm-yy', d));
+            }
+        }
+        console.log(dateRange);
     }
 
     $(".textfield__input.date").daterangepicker({
@@ -51,9 +56,8 @@ $(function () {
             maxDate: null,
             beforeShowDay: function (date) {
                 var dateString = jQuery.datepicker.formatDate('dd-mm-yy', date);
-
                 if ($.inArray(dateString, dateRange) != -1) {
-                    return [dateRange.indexOf(dateString) == -1, 'reserved'];
+                    return [false, 'reserved'];
                 }
                 else if (convertDate(date) >= convertDate(todayDate)) {
                     return [true, 'available'];
@@ -61,6 +65,7 @@ $(function () {
                 else {
                     return [false, "disabled"];
                 }
+
             }, onSelect: function (selectedDate) {
                 var date = selectedDate.match(/\d+/g);
                 var tableMonth = ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUN', 'JUI', 'AOU', 'SEP', 'OCT', 'NOV', 'DEC'];
