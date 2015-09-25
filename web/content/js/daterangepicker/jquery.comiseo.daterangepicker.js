@@ -72,7 +72,7 @@
                 }
             ],
             verticalOffset: 0,
-            initialText: 'Select date range...', // placeholder text - shown when nothing is selected
+            initialText: 'Sélectionner une date ...', // placeholder text - shown when nothing is selected
             icon: 'ui-icon-triangle-1-s',
             applyButtonText: 'OK',
             clearButtonText: 'Clear',
