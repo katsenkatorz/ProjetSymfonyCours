@@ -76,9 +76,10 @@
             icon: 'ui-icon-triangle-1-s',
             applyButtonText: 'Apply',
             clearButtonText: 'Clear',
+            closeButtonText: 'Close',
             cancelButtonText: 'Cancel',
             rangeSplitter: ' - ', // string to use between dates
-            dateFormat: 'M d, yy', // displayed date format. Available formats: http://api.jqueryui.com/datepicker/#utility-formatDate
+            dateFormat: 'dd/mm/yy', // displayed date format. Available formats: http://api.jqueryui.com/datepicker/#utility-formatDate
             altFormat: 'yy-mm-dd', // submitted date format - inside JSON {"start":"...","end":"..."}
             mirrorOnCollision: true, // reverse layout when there is not enough space on the right
             applyOnMenuSelect: true, // auto apply menu selections
@@ -391,17 +392,21 @@
      */
     function buildButtonPanel(classnameContext, options, handlers) {
         var $self,
+            $mdtpClose,
             applyButton,
             clearButton,
+            closeButton,
             cancelButton;
 
         function init() {
+            $mdtpClose = $('<div></div>')
+                .addClass('mdtp-close');
             $self = $('<div></div>')
                 .addClass(classnameContext + '-buttonpanel');
             //$self.parent().addClass('mdtp-second');
 
             if (options.applyButtonText) {
-                applyButton = $('<button type="button" class="ui-priority-primary"></button>')
+                applyButton = $('<button type="button" class="button js-button"></button>')
                     .text(options.applyButtonText)
                     .button();
 
@@ -409,15 +414,23 @@
             }
 
             if (options.clearButtonText) {
-                clearButton = $('<button type="button" class="ui-priority-secondary"></button>')
+                clearButton = $('<button type="button" class="button js-button"></button>')
                     .text(options.clearButtonText)
                     .button();
 
-                $self.append(clearButton);
+                //$self.append(clearButton);
+            }
+
+            if (options.closeButtonText) {
+                closeButton = $('<a><i class="material-icons">clear</i></a>');
+                    //.text(options.closeButtonText)
+                    //.button();
+
+                $mdtpClose.append(closeButton);
             }
 
             if (options.cancelButtonText) {
-                cancelButton = $('<button type="button" class="ui-priority-secondary"></button>')
+                cancelButton = $('<button type="button" class="button js-button"></button>')
                     .text(options.cancelButtonText)
                     .button();
 
@@ -435,6 +448,10 @@
                 clearButton.button('option', 'label', options.clearButtonText);
             }
 
+            if (closeButton) {
+                closeButton.button('option', 'label', options.closeButtonText);
+            }
+
             if (cancelButton) {
                 cancelButton.button('option', 'label', options.cancelButtonText);
             }
@@ -450,6 +467,10 @@
                     clearButton.click(handlers.onClear);
                 }
 
+                if (closeButton) {
+                    closeButton.click(handlers.onClose);
+                }
+
                 if (cancelButton) {
                     cancelButton.click(handlers.onCancel);
                 }
@@ -460,6 +481,9 @@
         return {
             getElement: function () {
                 return $self;
+            },
+            getCloseElem: function () {
+                return $mdtpClose;
             },
             enforceOptions: enforceOptions
         };
@@ -499,13 +523,7 @@
              setRange();
              }
              });*/
-            calendar = buildCalendar(classname, options, {
-                onApply: function () {
-                    isOpen = true;
-                    close();
-                    setRange();
-                }
-            });
+            calendar = buildCalendar(classname, options);
             autoFit.numberOfMonths = options.datepickerOptions.numberOfMonths; // save initial option!
             if (autoFit.numberOfMonths instanceof Array) { // not implemented
                 options.autoFitCalendars = false;
@@ -522,18 +540,49 @@
                 onCancel: function () {
                     close();
                     reset();
+                },
+                onClose: function () {
+                    close();
                 }
             });
             render();
+            //htmlConstruct();
             autoFit();
             reset();
             bindEvents();
-            htmlConstruct();
         }
 
         function render() {
+
+            var todayDate = new Date();
+            var dd = todayDate.getDate();
+            var mm = todayDate.getMonth() + 1;
+            var yyyy = todayDate.getFullYear();
+            var tableMonth = ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUN', 'JUI', 'AOU', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+            var header = $('<header class="mdtp-header">' +
+                '<div class="mdtp-actual-day">Wednesday</div>' +
+                '</header>');
+            var dateBloc = '<div class="mdtp-date">' +
+                '<div>' +
+                '<div class="left center p10"></div>' +
+                '<div class="mdtp-actual-month p80"><span class="first_month">' + tableMonth[parseInt(mm) - 1] + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_month">' + tableMonth[parseInt(mm) - 1] + '</span></div>' +
+                '<div class="right center p10"></div>' +
+                '<div class="clearfix"></div></div><div class="mdtp-actual-num"><span class="first_day">' + dd + '</span>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<span class="second_day">' + dd + '</span></div>' +
+                '<div>' +
+                '<div class="left center p10"></div>' +
+                '<div class="mdtp-actual-year p80"><span class="first_year">' + yyyy + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="second_year">' + yyyy + '</span></div>' +
+                '<div class="right center p10"></div>' +
+                '<div class="clearfix"></div>' +
+                '</div>' +
+                '</div>';
+
+
             $container = $('<div></div>', {'class': classname + ' ' + classname + '-' + sides[hSide] + ' ui-widget ui-widget-content ui-corner-all ui-front'})
                 .append($('<div></div>', {'class': classname + '-main ui-widget-content'})
+                    .append(header
+                        .append(buttonPanel.getCloseElem()))
+                    .append(dateBloc)
                     .append(presetsMenu.getElement())
                     .append(calendar.getElement())
                     .append(buttonPanel.getElement()))
