@@ -3,7 +3,7 @@
     {{ form_start(pre_resa, {'attr': {'class': 'cell cell--12-col form-ui'}}) }}
     {{ form_errors(pre_resa) }}
 
-    <div class="textfield js-textfield cell--6-col textfield--floating-label">
+    <div class="textfield js-textfield cell--12-col textfield--floating-label preresabutton">
         {{ form_widget(pre_resa.date, {
             'attr': {
                 'class': 'textfield__input date',
@@ -12,7 +12,7 @@
         }) }}
         {{ form_label(pre_resa.date, 'Arrivée - Départ', {'label_attr': {'class': 'textfield__label'}}) }}
     </div>
-    {{ form_widget(pre_resa.Reserver, {'attr': {'class': 'cell cell--12-col button js-button button--raised button--colored'}}) }}
+    {{ form_widget(pre_resa.Reserver, {'attr': {'class': 'cell--12-col button js-button button--raised button--colored'}}) }}
     {{ form_end(pre_resa) }}
 
 {% endblock %}
