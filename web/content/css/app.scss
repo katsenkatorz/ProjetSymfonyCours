@@ -1,6 +1,7 @@
-.test{
-    background:transparent url('image.png') left top no-repeat;
-}
+// compileCompressed, compressedFilenamePattern: app.min.css
+
+@import 'helpers.scss';
+
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -499,6 +500,7 @@ a.mdtp-select-month-after{
     right: 10px;
 }
 div.mdtp-close a{ color: #00BBAB}
+
 .mdtp-buttonpanel {
     text-align: right;
     padding-bottom: 15px;
@@ -517,7 +519,8 @@ td.ui-datepicker-unselectable.ui-state-disabled.reserved span{
     left: 0;
     z-index: 0;
 }
-.ui-state-highlight.ui-datepicker-current-day:after {
+.ui-state-highlight.ui-datepicker-current-day:after,
+.ui-datepicker-today > a:after{
     background-color: transparent;
 }
 input[type="text"]:focus{
