@@ -74,10 +74,10 @@
             verticalOffset: 0,
             initialText: 'Select date range...', // placeholder text - shown when nothing is selected
             icon: 'ui-icon-triangle-1-s',
-            applyButtonText: 'Apply',
+            applyButtonText: 'OK',
             clearButtonText: 'Clear',
             closeButtonText: 'Close',
-            cancelButtonText: 'Cancel',
+            cancelButtonText: 'ANNULER',
             rangeSplitter: ' - ', // string to use between dates
             dateFormat: 'dd/mm/yy', // displayed date format. Available formats: http://api.jqueryui.com/datepicker/#utility-formatDate
             altFormat: 'yy-mm-dd', // submitted date format - inside JSON {"start":"...","end":"..."}
