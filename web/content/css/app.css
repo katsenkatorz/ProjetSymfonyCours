@@ -202,4 +202,6 @@ td.ui-datepicker-unselectable.ui-state-disabled.reserved span { text-decoration:
 
 input[type="text"]:focus { outline: none; }
 
+.mdtp-buttonpanel span { color: #009688; }
+
 /*# sourceMappingURL=app.css.map */

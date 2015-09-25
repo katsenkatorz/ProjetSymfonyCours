@@ -36,14 +36,15 @@ class ReservationController extends Controller
      * Creates a new Reservation entity.
      *
      */
-    public function createAction(Request $request)
+    public function createAction(Request $request, $idGite)
     {
         $entity = new Reservation();
-        $form = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity, $idGite);
         $form->handleRequest($request);
-
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $gite = $em->getRepository('GiteBundle:Gite')->find($idGite);
+            $entity->setGite($gite);
             $em->persist($entity);
             $em->flush();
 
@@ -63,10 +64,10 @@ class ReservationController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Reservation $entity)
+    private function createCreateForm(Reservation $entity, $idGite)
     {
         $form = $this->createForm(new ReservationType(), $entity, array(
-            'action' => $this->generateUrl('reservation_create'),
+            'action' => $this->generateUrl('reservation_create', array('idGite' => $idGite)),
             'method' => 'POST',
         ));
 
@@ -79,11 +80,11 @@ class ReservationController extends Controller
      * Displays a form to create a new Reservation entity.
      *
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, $idGite)
     {
         $defaultData = array('message' => 'Type your message here');
 
-        $formPreResa = $this->formPreResa($defaultData);
+        $formPreResa = $this->formPreResa($defaultData, $date_resa = null, $idGite);
         $formPreResa->handleRequest($request);
 
         if ($formPreResa->isValid()) {
@@ -94,21 +95,17 @@ class ReservationController extends Controller
         $entity = new Reservation();
 
         /* Gite */
-        $giteId = $data['idGite'];
         $em = $this->getDoctrine()->getManager();
-        $gite = $em->getRepository('GiteBundle:Gite')->findOneById($giteId);
+        $gite = $em->getRepository('GiteBundle:Gite')->findOneById($idGite);
 
         $date = json_decode($data["date"], true);
 
         $entity->setArrival(new \DateTime($date["start"]));
         $entity->setDeparture(new \DateTime($date["end"]));
 
-//        $entity->setArrival($data['arrival']);
-//        $entity->setDeparture($data['departure']);
-
         $entity->setGite($gite);
 
-        $form = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity, $idGite);
         return $this->render('GiteBundle:Reservation:new.html.twig', array(
             'entity' => $entity,
             'form' => $form->createView(),
@@ -241,6 +238,8 @@ class ReservationController extends Controller
      */
     public function preresaAction($idGite)
     {
+//        dump($idGite);
+//        die();
 
         $defaultData = array('message' => 'Type your message here');
         $date_resa_array = array();
@@ -248,33 +247,33 @@ class ReservationController extends Controller
         $em = $this->getDoctrine()->getManager();
         $reservations = $em->getRepository('GiteBundle:Reservation')->findAll();
 
-        foreach ($reservations as $key => $reservation ) {
-            if($reservation->getGite()){
+        foreach ($reservations as $key => $reservation) {
+            if ($reservation->getGite()->getId() && ($reservation->getGite()->getId() == $idGite)) {
                 $arrival = date_format($reservation->getArrival(), 'Y-m-d');
                 $departure = date_format($reservation->getDeparture(), 'Y-m-d');
                 $date_resa_array["arrival"][$key] = $arrival;
                 $date_resa_array["departure"][$key] = $departure;
             }
         }
-        
+
         $date_resa = json_encode($date_resa_array);
-        $form = $this->formPreResa($defaultData, $idGite, $date_resa);
+        $form = $this->formPreResa($defaultData, $date_resa, $idGite);
 
         return $this->render('GiteBundle:Reservation:preresa.html.twig', array(
             'pre_resa' => $form->createView(),
         ));
     }
 
-    private function formPreResa($defaultData, $idGite = null, $date_resa = null)
+    private function formPreResa($defaultData, $date_resa = null, $idGite)
     {
         return $this->createFormBuilder($defaultData)
-            ->setAction($this->generateUrl('reservation_new'))
+            ->setAction($this->generateUrl('reservation_new', array('idGite' => $idGite)))
             ->add('date', 'text')
 //            ->add('arrival', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
 //            ->add('departure', 'date', array('widget' => 'single_text', 'format' => 'dd/MM/yyyy'))
-            ->add('idGite', 'hidden', array(
-                'data' => $idGite
-            ))
+//            ->add('idGite', 'hidden', array(
+//                'data' => $idGite
+//            ))
             ->add('date_resa', 'hidden', array(
                 'data' => $date_resa
             ))

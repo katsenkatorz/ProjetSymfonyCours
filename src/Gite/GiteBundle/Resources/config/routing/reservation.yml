@@ -7,11 +7,11 @@ reservation_show:
     defaults: { _controller: "GiteBundle:Reservation:show" }
 
 reservation_new:
-    path:     /new
+    path:     /{idGite}/new/
     defaults: { _controller: "GiteBundle:Reservation:new" }
 
 reservation_create:
-    path:     /create
+    path:      /{idGite}/create/
     defaults: { _controller: "GiteBundle:Reservation:create" }
     methods:  POST
 

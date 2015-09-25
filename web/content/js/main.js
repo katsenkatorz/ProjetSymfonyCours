@@ -6,12 +6,18 @@ $(function () {
     var second_month = '.second_month';
     var first_day = '.first_day';
     var second_day = '.second_day';
-    var dates = '#form_date_resa';
-    if ($(dates).val()) {
-        dates = JSON.parse($(dates).val());
+    var datesSelect = '#form_date_resa';
+
+
+    if ($(datesSelect).val()) {
+        var obj = JSON.parse($(datesSelect).val());
+        var startDate = $.map(obj.arrival, function (el) {
+            return el;
+        });
+        var endDate = $.map(obj.departure, function (el) {
+            return el;
+        });
     }
-    var startDate = dates.arrival;
-    var endDate = dates.departure;
 
     function convertDate(date) {
         var dd = date.getDate();
@@ -29,7 +35,6 @@ $(function () {
 
     var todayDate = new Date();
     todayDate.setHours(00);
-
 
     var dateRange = [];
     if (startDate && endDate && (startDate.length == endDate.length)) {
