@@ -35,7 +35,6 @@ $(function () {
                 dateRange.push($.datepicker.formatDate('dd-mm-yy', d));
             }
         }
-        console.log(dateRange);
     }
 
     $(".textfield__input.date").daterangepicker({

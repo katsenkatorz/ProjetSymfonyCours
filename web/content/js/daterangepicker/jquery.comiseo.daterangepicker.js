@@ -405,13 +405,6 @@
                 .addClass(classnameContext + '-buttonpanel');
             //$self.parent().addClass('mdtp-second');
 
-            if (options.applyButtonText) {
-                applyButton = $('<button type="button" class="button js-button"></button>')
-                    .text(options.applyButtonText)
-                    .button();
-
-                $self.append(applyButton);
-            }
 
             if (options.clearButtonText) {
                 clearButton = $('<button type="button" class="button js-button"></button>')
@@ -435,6 +428,14 @@
                     .button();
 
                 $self.append(cancelButton);
+            }
+
+            if (options.applyButtonText) {
+                applyButton = $('<button type="button" class="button js-button"></button>')
+                    .text(options.applyButtonText)
+                    .button();
+
+                $self.append(applyButton);
             }
             bindEvents();
         }
