@@ -1,4 +1,6 @@
-// out: app.min.css, outputStyle: compressed
+.test{
+    background:transparent url('image.png') left top no-repeat;
+}
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -493,3 +495,11 @@ a.mdtp-select-month-after{
     right: 10px;
 }
 div.mdtp-close a{ color: #00BBAB}
+.mdtp-buttonpanel {
+    text-align: right;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+td.ui-datepicker-unselectable.ui-state-disabled.reserved span{
+    text-decoration: line-through;
+}
