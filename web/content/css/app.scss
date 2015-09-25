@@ -398,6 +398,7 @@ a.ui-state-default.ui-state-active {
     position: absolute;
     top: 0.5em;
     right: 1rem;
+    cursor: pointer;
 }
 .mdtp .mdtp-close > a > i {
     font-size: 1em;
@@ -443,6 +444,8 @@ td.ui-datepicker-unselectable.ui-state-disabled.reserved span {
     width: 15px;
     height: 15px;
     line-height: 15px;
+    position: relative;
+    z-index: 2;
 }
 
 .ui-datepicker th {
@@ -457,11 +460,12 @@ td.ui-datepicker-unselectable.ui-state-disabled.reserved span {
     font-size: 0.9rem;
     text-align: center;
     padding: 1rem 0.3rem;
+    position: relative;
 }
 
-.ui-state-highlight {
-    background: #ddd;
-}
+// .ui-state-highlight {
+//     background: #ddd;
+// }
 
 .ui-state-hover {
     margin: 0;
@@ -502,4 +506,17 @@ div.mdtp-close a{ color: #00BBAB}
 }
 td.ui-datepicker-unselectable.ui-state-disabled.reserved span{
     text-decoration: line-through;
+}
+.ui-state-highlight:after {
+    content: "";
+    background-color: #eee;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+    z-index: 0;
+}
+.ui-state-highlight.ui-datepicker-current-day:after {
+    background-color: transparent;
 }
