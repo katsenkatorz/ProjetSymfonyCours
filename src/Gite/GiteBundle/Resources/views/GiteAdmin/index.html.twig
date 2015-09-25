@@ -2,50 +2,53 @@
 
 {% block body -%}
 <!-- <h1>Gite list</h1> -->
+<div class="grid">
+  <div class="cell cell--3-col"></div>
 
-<table class="records_list">
-	<thead>
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Content</th>
-			<th>Options</th>
-			<th>Prix</th>
-			<th>Capacité</th>
-			<th>Actions</th>
-		</tr>
-	</thead>
-	<tbody>
-		{% for entity in entities %}
-		<tr>
-			<td>
-				<a href="{{ path('gite_show', { 'id': entity.id }) }}">{{ entity.id }}</a>
-			</td>
-			<td>{{ entity.name }}</td>
-			<td>{{ entity.content }}</td>
-			<td>{{ entity.options }}</td>
-			<td>{{ entity.prix }}</td>
-			<td>{{ entity.capacity }}</td>
-			<td>
-				<ul>
-					<li>
-						<a href="{{ path('gite_show', { 'id': entity.id }) }}">show</a>
-					</li>
-					<li>
-						<a href="{{ path('gite_edit', { 'id': entity.id }) }}">edit</a>
-					</li>
-				</ul>
-			</td>
-		</tr>
-		{% endfor %}
-	</tbody>
-</table>
+  <div class="cell cell--6-col cell--8-col-tablet cell--4-col-phone">
 
-<ul>
-	<li>
-		<a href="{{ path('gite_new') }}">
-			Create a new entry
-		</a>
-	</li>
-</ul>
+    <table class="records_list data-table js-data-table shadow--2dp width-100">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Content</th>
+          <th>Options</th>
+          <th>Prix</th>
+          <th>Capacité</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entity in entities %}
+        <tr>
+          <td>
+            <a href="{{ path('gite_show', { 'id': entity.id }) }}">{{ entity.id }}</a>
+          </td>
+          <td>{{ entity.name }}</td>
+          <td>{{ entity.content }}</td>
+          <td>{{ entity.options }}</td>
+          <td>{{ entity.prix }}</td>
+          <td>{{ entity.capacity }}</td>
+          <td>
+            <a href="{{ path('gite_edit', { 'id': entity.id }) }}">
+              <i class="material-icons">mode_edit</i>
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="grid">
+      <div class="cell cell--12-col">
+        <a class="button js-button button--raised button--colored js-ripple-effect color-text--black" href="{{ path('gite_new') }}">
+          Create a new entry
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 {% endblock %}
