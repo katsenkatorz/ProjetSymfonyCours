@@ -681,6 +681,10 @@
             if (!range.end) {
                 range.end = range.start;
             }
+            // var dateFormat = options.altFormat;
+            // $("input#drp_autogen0").val($.datepicker.formatDate(dateFormat, range.start) + " - " + $.datepicker.formatDate(dateFormat, range.end));
+            $('div.preresabutton').addClass('is-focused is-dirty is-valid');
+            $('div.preresabutton').removeClass('is-invalid');
             value && calendar.setRange(range);
             triggerButton.setLabel(formatRangeForDisplay(range));
             $originalElement.val(formatRange(range)).change();
@@ -688,6 +692,7 @@
                 options.onChange();
             }
         }
+
 
         function getRange() {
             return parseRange($originalElement.val());
