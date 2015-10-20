@@ -84,7 +84,8 @@ class ImagineController
                     if ($defaultImageUrl = $this->dataManager->getDefaultImageUrl($filter)) {
                         return new RedirectResponse($defaultImageUrl);
                     }
-
+//                    var_dump($defaultImageUrl);
+//                    die();
                     throw new NotFoundHttpException('Source image could not be found', $e);
                 }
 

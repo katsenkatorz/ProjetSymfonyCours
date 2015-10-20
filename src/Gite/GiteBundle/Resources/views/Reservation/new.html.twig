@@ -3,13 +3,10 @@
 {% block body -%}
     <h1>Reservation creation</h1>
 
-    {{ form(form) }}
+    {#{{ form(form) }}#}
 
-        <ul class="record_actions">
-    <!-- <li>
-        <a href="{{ path('reservation') }}">
-            Back to the list
-        </a>
-    </li> -->
-</ul>
+    {{ form_start(form, {'attr': {'class': 'cell cell--12-col form-ui', 'id' : 'reservationGite'}}) }}
+    {{ form_errors(form) }}
+    {{ form_end(form) }}
+
 {% endblock %}
